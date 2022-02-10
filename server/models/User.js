@@ -1,9 +1,8 @@
-const mongoose = require('mongoose');
-const { Schema, model } = require('mongoose');
-const bcrypt = require('bcrypt');
+const mongoose = require("mongoose");
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 //REQUIRE ORDER AS A USER COULD HAVE MORE THAN 1 ORDER
-const Order = require('./Order');
-
+const Order = require("./Order");
 
 const userSchema = new Schema({
   username: {
@@ -12,11 +11,21 @@ const userSchema = new Schema({
     unique: true,
     trim: true,
   },
+  address: {
+    type: String,
+    required: true,
+    unique: true,
+  },
+  phone: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   email: {
     type: String,
     required: true,
     unique: true,
-    match: [/.+@.+\..+/, 'Must match an email address!'],
+    match: [/.+@.+\..+/, "Must match an email address!"],
   },
   password: {
     type: String,
@@ -26,8 +35,8 @@ const userSchema = new Schema({
   orders: [Order.schema],
 });
 
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -39,6 +48,6 @@ userSchema.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
 module.exports = User;
