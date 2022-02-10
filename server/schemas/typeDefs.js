@@ -49,7 +49,7 @@ const typeDefs = gql`
     products(category: ID, name: String): [Product]
     product(_id: ID!): Product
     order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    checkout(products: [ID]): Checkout
     
   }
 
@@ -57,7 +57,7 @@ const typeDefs = gql`
     addUser(username: String!, address: String!, phone: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
-    updateProduct:(_id: ID!, quantity: Int!); Product
+    updateProduct:(_id: ID!, quantity: Int!): Product
   }
 `;
 

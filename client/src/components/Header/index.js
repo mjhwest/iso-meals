@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import './Header.css';
 
 import Auth from '../../utils/auth';
 
@@ -10,7 +10,7 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="nav-container bg-primary text-light mb-4 py-3 flex-row align-center">
+    <header className="nav-container text-light mb-4 py-3 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
@@ -34,10 +34,10 @@ const Header = () => {
               <Link className="btn btn-lg btn-light m-2" to="/signup">
                 Signup
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-lg btn-light m-2" to="/produts">
                 Products
               </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
+              <Link className="btn btn-lg btn-light m-2" to="/what">
                 What We Do 
               </Link>
             </>

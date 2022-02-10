@@ -54,7 +54,7 @@ function App() {
               <Home />
             </Route>
             {/** **/}
-            <Route exact path="/login">
+            <Route  exact path="/login">
               <Login />
             </Route>
             {/** **/}
@@ -70,6 +70,7 @@ function App() {
               <What />
             </Route>
           </div>
+          
           <Footer />
         </div>
       </Router>

@@ -1,22 +1,29 @@
-[
-  {
-    "username": "elliot",
-    "email": "elliot@email.com",
-    "password": "password01"
-  },
-  {
-    "username": "dory",
-    "email": "dory@email.com",
-    "password": "password01"
-  },
-  {
-    "username": "drew",
-    "email": "drew@email.com",
-    "password": "password01"
-  },
-  {
-    "username": "portia",
-    "email": "portia@email.com",
-    "password": "password01"
-  }
+[{
+        "username": "elliot",
+        "address": "124 Elliot Street",
+        "phone": "13579",
+        "email": "elliot@email.com",
+        "password": "password01"
+    },
+    {
+        "username": "dory",
+        "address": "45524 Dory Dribe",
+        "phone": "14449",
+        "email": "dory@email.com",
+        "password": "password01"
+    },
+    {
+        "username": "drew",
+        "address": "333 Drew Court",
+        "phone": "66664453",
+        "email": "drew@email.com",
+        "password": "password01"
+    },
+    {
+        "username": "portia",
+        "address": "87A Port Drive",
+        "phone": "535535",
+        "email": "portia@email.com",
+        "password": "password01"
+    }
 ]

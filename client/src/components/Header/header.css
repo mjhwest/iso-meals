@@ -1,0 +1,19 @@
+.nav-container {
+    background: #598f1d;
+}
+
+.m-0 {
+    color: orange;
+}
+
+.btn.btn-info {
+    background-color: transparent;
+}
+
+.btn.btn-info:hover {
+    color: orange;
+}
+
+.btn.btn-light {
+    background-color: transparent
+}
