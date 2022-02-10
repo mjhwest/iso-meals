@@ -101,7 +101,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
-
+    
 
     //UPDATE PRODUCT (Quantity)
     updateProduct: async (parent, { _id, quantity }) => {

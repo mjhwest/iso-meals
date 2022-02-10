@@ -14,7 +14,7 @@ const typeDefs = gql`
     image: String 
     price: Int!
     quantity: Int
-    category: Category 
+    category: Category
   }
 
   type User {
@@ -57,7 +57,7 @@ const typeDefs = gql`
     addUser(username: String!, address: String!, phone: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
-    updateProduct:(_id: ID!, quantity: Int!): Product
+    updateProduct(_id: ID!, quantity: Int!): Product
   }
 `;
 
@@ -66,6 +66,7 @@ module.exports = typeDefs;
 //REMEMBER 
 // Query ; 'like a get request' it only retrives informatoin
 // Mutation: Anything that changes the data in the back end. 
+
 
 
 // NOTE: 

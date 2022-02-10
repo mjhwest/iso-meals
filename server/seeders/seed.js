@@ -5,17 +5,6 @@ const { User, Product, Category } = require('../models');
 
 db.once('open', async () => {
 
-
-  // try {
-  //   await User.deleteMany({});
-  //   await User.create(userSeeds);
-  // } catch (err) {
-  //   console.error(err);
-  //   process.exit(1);
-  // }
-  // console.log('all done!');
-  // process.exit(0);
-
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
@@ -43,7 +32,7 @@ db.once('open', async () => {
   name: "Ice Cream", 
   description: "Strawberry Icecream",
   image: 'strawberryicecream.jpg',
-  category: categories[3]._id,
+  // category: categories[3]._id,
   price: 9,
   quantity:100 
   }
