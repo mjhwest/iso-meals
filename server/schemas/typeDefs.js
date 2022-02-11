@@ -54,6 +54,7 @@ const typeDefs = gql`
     addOrder(products: [ID]!): Order
     updateProduct(_id: ID!, quantity: Int!): Product
     updateUser(firstName: String, lastName: String, email: String, password: String): User
+    Order(_id: ID!): Order
   }
 `;
 
