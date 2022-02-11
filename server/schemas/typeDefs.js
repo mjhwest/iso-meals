@@ -1,24 +1,13 @@
 const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
-
   type Category {
     _id: ID
     name: String!
   }
 
-  type Product {
-    _id: ID
-    name: String! 
-    description: String 
-    image: String 
-    price: Int!
-    quantity: Int
-    category: Category
-  }
-
   type User {
-    _id: ID
+    _id: ID!
     username: String!
     address: String!
     email: String!
@@ -41,27 +30,43 @@ const typeDefs = gql`
     session: ID 
   }
   
-  
+  type Product {
+    _id: ID!
+    name: String! 
+    description: String 
+    image: String 
+    price: String! 
+    quantity: Int
+  }
+
   type Query {
     users: [User]
-    user(username: String!): User
-    categories: [Category]  
-    products(category: ID, name: String): [Product]
+    user(_id: ID!):User
+    products(name: String): [Product]
     product(_id: ID!): Product
     order(_id: ID!): Order
     checkout(products: [ID]): Checkout
-    
   }
-
+   
   type Mutation {
     addUser(username: String!, address: String!, phone: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
     updateProduct(_id: ID!, quantity: Int!): Product
+    updateUser(firstName: String, lastName: String, email: String, password: String): User
   }
 `;
 
+
 module.exports = typeDefs;
+
+// categories: [Category] - this was removed from query. 
+// products(category: ID, name: String): [Product] this was remove from query 
+// category: Category - this was removed from product
+// user(username: String!): User - remove from query
+
+
+
 
 //REMEMBER 
 // Query ; 'like a get request' it only retrives informatoin

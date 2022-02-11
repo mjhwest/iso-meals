@@ -4,38 +4,81 @@ const { User, Product, Category } = require('../models');
 // const productSeeds = require('./productSeeds.json')
 
 db.once('open', async () => {
-
-  await Category.deleteMany();
-
-  const categories = await Category.insertMany([
-    { name: 'Vegan ', _id: 1 },
-    { name: 'Vegan Deluxe ' },
-    { name: 'Vegetarian' },
-    { name: 'Classic' },
-    { name: 'Comfort' },
-    { name: 'Drinks' }
-  ]);
-  console.log('categories seeded');
-
-
   await Product.deleteMany();
 
   const products = await Product.insertMany([{
-    name: "Chilli Chickpeas", 
-    description: "chickpeas with chilli",
+    //  _id:_1, 
+    name: "Vegan", 
+    description: "Vegan breakfast, lunch and dinner for 7 days.",
     image: 'xxxx.jpg',
-    category: 1,
-    price: 10,
+    price: 100,
     quantity :100 
   }, 
   {
-  name: "Ice Cream", 
-  description: "Strawberry Icecream",
-  image: 'strawberryicecream.jpg',
-  // category: categories[3]._id,
-  price: 9,
-  quantity:100 
-  }
+    // _id: 2, 
+    name: "Vegan Plus", 
+    description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks",
+    image: '1xxxx.jpg',
+    price: 120,
+    quantity :50 
+  },
+  {
+    // _id: 3, 
+    name: "Vegan Deluxe", 
+    description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks with specality drinks",
+    image: '2xxxx.jpg',
+    price: 150,
+    quantity :20 
+  },
+  {
+    // _id: 4, 
+    name: "Vego", 
+    description: "Vego breakfast, lunch and dinner for 7 days.",
+    image: '3xxxx.jpg',
+    price: 100,
+    quantity :20 
+  },
+  {
+    // _id: 5, 
+    name: "Vego Plus ", 
+    description: "Vego breakfast, lunch and dinner for 7 days, plus snacks",
+    image: '3xxxx.jpg',
+    price: 120,
+    quantity :20 
+  },
+  {
+    // _id: 6, 
+    name: "Vego Deluxe ", 
+    description: "Vego breakfast, lunch and dinner for 7 days, plus snacks with specality drinks",
+    image: '3xxxx.jpg',
+    price: 145,
+    quantity :20 
+  },
+  {
+    // _id: 7, 
+    name: "Classic", 
+    description: "Classic breakfast, lunch and dinner for 7 days.",
+    image: '3xxxx.jpg',
+    price: 100,
+    quantity :20 
+  },
+  {
+    // _id: 8, 
+    name: "Classic Plus", 
+    description: "Classic breakfast, lunch and dinner for 7 days. plus snacks",
+    image: '3xxxx.jpg',
+    price: 125,
+    quantity :20 
+  },
+  {
+    // _id: 9, 
+    name: "Classic Deluxe", 
+    description: "Classic breakfast, lunch and dinner for 7 days. plus snacks with specality drinks",
+    image: '3xxxx.jpg',
+    price: 150,
+    quantity :20 
+  },
+  
   ])
 
 
@@ -60,6 +103,10 @@ db.once('open', async () => {
     password: "password01",
     orders: [
 
+      {
+        products: [products._id]
+      }
+
     ]
   })
 
@@ -76,3 +123,20 @@ db.once('open', async () => {
   console.log('users seeded');
   process.exit();
 });
+
+
+
+
+
+  
+  //remove CATEGORY FOR NOW 
+  // await Category.deleteMany();
+  // const categories = await Category.insertMany([
+  //   { name: 'Vegan ', _id: 1 },
+  //   { name: 'Vegan Deluxe ' },
+  //   { name: 'Vegetarian' },
+  //   { name: 'Classic' },
+  //   { name: 'Comfort' },
+  //   { name: 'Drinks' }
+  // ]);
+  // console.log('categories seeded');
