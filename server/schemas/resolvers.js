@@ -132,18 +132,34 @@ const resolvers = {
     },
 
     //ADD ORDER
-    addOrder: async (parent, { products }, context) => {
-      console.log(context);
-      if (context.user) {
-        const order = new Order({ products });
-        await User.findByIdAndUpdate(context.user._id, {
-          $push: { orders: order },
-        });
-        return order;
-      }
+    // addOrder: async (parent, { products }, context) => {
+    //   console.log(context);
+    //   if (context.user) {
+    //     const order = new Order({ products });
+    //     await User.findByIdAndUpdate(context.user._id, {
+    //       $push: { orders: order },
+    //     });
+    //     return order;
+    //   }
 
-      throw new AuthenticationError("Not logged in");
-    },
+    //   throw new AuthenticationError("Not logged in");
+    // },
+
+    //ADD ORDER VERSION 2
+      addOrder: async (parent, { products }, context) => {
+        if (context.user) {
+          const order = await (await Order.create({ products, purchaseDate: new Date().toISOString() })).populate('products').execPopulate();;
+          console.log(order);
+          await User.findByIdAndUpdate(context.user._id, {
+            $push: { orders: order },
+          });
+          return order;
+        }
+  
+        throw new AuthenticationError("Not logged in");
+      },
+
+
     //UPDATE USER
     updateUser: async (parent, args, context) => {
       if (context.user) {
@@ -158,12 +174,18 @@ const resolvers = {
     //UPDATE PRODUCT (Quantity)
     updateProduct: async (parent, { _id, quantity }) => {
       const decrement = Math.abs(quantity) * -1;
-
       return await Product.findByIdAndUpdate(
         _id,
         { $inc: { quantity: decrement } },
         { new: true }
       );
+    },
+
+    //ORDER MUTATION
+    Order: {
+      products(parent) {
+        return Product.find({_id: {$in: parent.products}})
+       }
     },
   },
 };
