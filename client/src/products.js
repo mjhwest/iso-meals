@@ -7,7 +7,8 @@ const products = [
         price: 100,
         quantity :100, 
         rating: 4.5,
-        numReviews: 12
+        numReviews: 12,
+        countInStock: 100
 
       }, 
       {
@@ -18,7 +19,8 @@ const products = [
         price: 120,
         quantity :50,
         rating: 4,
-        numReviews: 8
+        numReviews: 8,
+        countInStock: 100
       },
       {
         _id: '3', 
@@ -28,7 +30,8 @@ const products = [
         price: 150,
         quantity :20,
         rating: 4,
-        numReviews: 8
+        numReviews: 8,
+        countInStock: 110
       },
       {
         _id: '4', 
