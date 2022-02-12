@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import Rating from '../Rating/Rating'
+import './Product.css';
 
 const Product = ({product}) => {
   return (
@@ -13,7 +14,9 @@ const Product = ({product}) => {
         <Card.Body>
             <a href={`/product/${product._id}`}>
                 <Card.Title as='div'>
-                    <strong>{product.name}</strong>
+                    <div className='card-body-title'> 
+                    <strong >{product.name}</strong>
+                    </div>
                 </Card.Title>
             </a>
 
