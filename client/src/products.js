@@ -72,3 +72,5 @@ const products = [
         quantity :20 
       }
 ]
+
+export default products
