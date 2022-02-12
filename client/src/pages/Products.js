@@ -1,13 +1,13 @@
-// import React, { useState } from 'react';
+import React, { useState } from 'react';
 
 
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 
-// const Products = (props) => {
+const Products = (props) => {
 
-//   return (
-// <div> test </div>
-//   );
-// };
+  return (
+<div> test </div>
+  );
+};
 
-// export default Products;
+export default Products;
