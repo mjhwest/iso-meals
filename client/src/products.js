@@ -6,7 +6,7 @@ const products = [
         image: './images/vegan.jpg',
         price: 100,
         quantity :100, 
-        rating: 4,
+        rating: 4.5,
         numReviews: 12
 
       }, 
@@ -57,7 +57,7 @@ const products = [
         image: './images/vegetariandeluxe.jpg',
         price: 145,
         quantity :20, 
-        rating: 4,
+        rating: 4.5,
         numReviews: 12
       },
       {
@@ -67,7 +67,7 @@ const products = [
         image: './images/classic.jpg',
         price: 100,
         quantity :20, 
-        rating: 4,
+        rating: 4.5,
         numReviews: 12
       },
       {
