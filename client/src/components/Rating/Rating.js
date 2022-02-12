@@ -1,10 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Rating = ({ value, text}) => {
+const Rating = ({ value, text, color}) => {
   return (
     <div className='rating'>
         <span> 
-            <i className={
+            <i 
+            style={{color}} 
+            className={
                 value >= 1 
                 ? 'fa-solid fa-star'
                 : value >= 0.5
@@ -15,7 +18,9 @@ const Rating = ({ value, text}) => {
         </span>
 
         <span> 
-            <i className={
+            <i
+            style={{color}} 
+            className={
                 value >= 2 
                 ? 'fa-solid fa-star'
                 : value >= 1.5
@@ -26,7 +31,9 @@ const Rating = ({ value, text}) => {
         </span>
 
         <span> 
-            <i className={
+            <i 
+            style={{color}} 
+            className={
                 value >= 3  
                 ? 'fa-solid fa-star'
                 : value >= 2.5
@@ -37,22 +44,26 @@ const Rating = ({ value, text}) => {
         </span>
 
         <span> 
-            <i className={
+            <i 
+            style={{color}} 
+            className={
                 value >= 4 
-                ? 'fa-solid fa-star'
+                ? 'fa-solid fa-star-stroke'
                 : value >= 3.5
-                ? 'fa-light fa-star-half'
+                ? 'fa-star-half'
                 : 'far fa-star'
                 }
                 ></i>
         </span>
 
         <span> 
-            <i className={
+            <i 
+            style={{color}} 
+            className={
                 value >= 5 
                 ? 'fa-solid fa-star'
                 : value >= 4.5
-                ? 'fa-light fa-star-half'
+                ? 'fa-regular fa-star-half-stroke'
                 : 'far fa-star'
                 }
                 ></i>
@@ -61,6 +72,16 @@ const Rating = ({ value, text}) => {
 
     </div>
   )
+}
+
+Rating.defaultProps = {
+    color: '#f8e825'
+}
+
+Rating.propTypes = { 
+    value: PropTypes.number.isRequired,
+    text: PropTypes.string.isRequired,
+    color: PropTypes.string, 
 }
 
 export default Rating
