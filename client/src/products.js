@@ -1,75 +1,94 @@
 const products = [
     {
          _id:'1', 
-        name: "Vegan", 
+        name: "Vegan Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days.",
-        image: './image/vegan.jpg',
+        image: './images/vegan.jpg',
         price: 100,
-        quantity :100 
+        quantity :100, 
+        rating: 4,
+        numReviews: 12
+
       }, 
       {
         _id: '2', 
-        name: "Vegan Plus", 
+        name: "Vegan Plus Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks",
-        image: './image/veganplus.jpg',
+        image: './images/veganplus.jpg',
         price: 120,
-        quantity :50 
+        quantity :50,
+        rating: 4.5,
+        numReviews: 8
       },
       {
         _id: '3', 
-        name: "Vegan Deluxe", 
+        name: "Vegan Deluxe Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks with specality drinks",
-        image: './image/vegandeluxe.jpg',
+        image: './images/vegandeluxe.jpg',
         price: 150,
-        quantity :20 
+        quantity :20,
+        rating: 4,
+        numReviews: 8
       },
       {
         _id: '4', 
-        name: "Vegetarian", 
+        name: "Vegetarian Bundle", 
         description: "Vegetarian breakfast, lunch and dinner for 7 days.",
-        image: './image/vegetarian.jpg',
+        image: './images/vegetarian.jpg',
         price: 100,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       },
       {
         _id: '5', 
-        name: "Vego Plus ", 
+        name: "Vego Plus Bundle", 
         description: "Vego breakfast, lunch and dinner for 7 days, plus snacks",
-        image: './image/vegetarianplus.jpg',
+        image: './images/vegetarianplus.jpg',
         price: 120,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       },
       {
         _id: '6', 
-        name: "Vego Deluxe ", 
+        name: "Vego Deluxe Bundle", 
         description: "Vego breakfast, lunch and dinner for 7 days, plus snacks with specality drinks",
-        image: './image/vegetariandeluxe.jpg',
+        image: './images/vegetariandeluxe.jpg',
         price: 145,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       },
       {
         _id: '7', 
-        name: "Classic", 
+        name: "Classic Bundle", 
         description: "Classic breakfast, lunch and dinner for 7 days.",
-        image: './image/classic.jpg',
+        image: './images/classic.jpg',
         price: 100,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       },
       {
         _id: '8', 
-        name: "Classic Plus", 
+        name: "Classic Plus Bundle", 
         description: "Classic breakfast, lunch and dinner for 7 days. plus snacks",
-        image: './image/classicplus.jpg',
+        image: './images/classicplus.jpg',
         price: 125,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       },
       {
         _id: '9', 
-        name: "Classic Deluxe", 
+        name: "Classic Deluxe Bundle", 
         description: "Classic breakfast, lunch and dinner for 7 days. plus snacks with specality drinks",
-        image: './image/classicdeluxe.jpg',
+        image: './images/classicdeluxe.jpg',
         price: 150,
-        quantity :20 
+        quantity :20, 
+        rating: 4,
+        numReviews: 12
       }
 ]
 

@@ -64,10 +64,10 @@ function App() {
             </Route>
             {/** **/}
             <Route exact path="/products">
-              <Products />
               <main>
-              <Container> </Container>  
-              <h1> Food Bundles </h1>
+              <Container>
+              <Products />  
+              </Container>  
               </main> 
 
             </Route>
