@@ -17,7 +17,7 @@ const products = [
         image: './images/veganplus.jpg',
         price: 120,
         quantity :50,
-        rating: 4.5,
+        rating: 4,
         numReviews: 8
       },
       {
