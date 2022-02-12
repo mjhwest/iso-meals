@@ -50,46 +50,70 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container">
-            {/** **/}
-            <Route exact path="/">
-              <Home />
-            </Route>
-            {/** **/}
-            <Route exact path="/login">
-              <Login />
-            </Route>
-            {/** **/}
-            <Route exact path="/signup">
-              <Signup />
-            </Route>
-            {/** **/}
-            <Route exact path="/products">
-              <main>
-                <Container>
-                  <Products />
+          <main>
+   
+          <Container>
+            <Route exact path="/" component={Home}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/signup" component={Signup}/>
+            <Route exact path="/products" component={Products}/>
+            <Route exact path="/products/:id" component={BundleScreen}/> 
                 </Container>
-              </main>
-            </Route>
-            {/** **/}
-            <Route exact path="/products/:id">
-              <main>
-                <Container>
-                  <BundleScreen />
-                </Container>
-              </main>
-            </Route>
-            {/** **/}
-            {/* <Route exact path="/what-we-do">
-              <What />
-            </Route> */}
-          </div>
+               </main>
+       </div>
 
+     
           <Footer />
-        </div>
+ 
       </Router>
     </ApolloProvider>
   );
 }
 
 export default App;
+
+
+{/* <ApolloProvider client={client}>
+<Router>
+  <div className="flex-column justify-flex-start min-100-vh">
+    <Header />
+    <div className="container"> */}
+      {/** **/}
+      // <Route exact path="/">
+      //   <Home />
+      // </Route>
+      {/** **/}
+      // <Route exact path="/login">
+      //   <Login />
+      // </Route>
+      {/** **/}
+      // <Route exact path="/signup">
+      //   <Signup />
+      // </Route>
+      {/** **/}
+      {/* UNDO TO HERE */}
+      // <Route exact path="/products">
+      //   <main>
+      //     <Container>
+      //       <Products />
+      //     </Container>
+      //   </main>
+      // </Route>
+      {/** **/}
+      // <Route exact path="/products/:id">
+      //   <main>
+      //     <Container>
+      //       <BundleScreen />
+      //     </Container>
+      //   </main>
+      // </Route>
+      {/** **/}
+      {/* <Route exact path="/what-we-do">
+        <What />
+      </Route> */}
+//     </div>
+
+//     <Footer />
+//   </div>
+// </Router>
+// </ApolloProvider>
