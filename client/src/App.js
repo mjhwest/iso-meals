@@ -69,7 +69,6 @@ function App() {
               <Products />  
               </Container>  
               </main> 
-
             </Route>
             {/** **/}
             <Route exact path="/what-we-do">
