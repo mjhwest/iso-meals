@@ -10,7 +10,7 @@ const Products = () => {
   return (
     <>
 
-    <h1> Latest Products</h1>
+    <h1> View Our Food Bundles</h1>
     <Row>
       {/* TRYING TO LOOP THROUGH PRODUCTS.js using.map to make a list  */}
       {products.map(product => (
