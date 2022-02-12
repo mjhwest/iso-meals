@@ -1,7 +1,5 @@
 const db = require('../config/connection');
 const { User, Product, Category } = require('../models');
-// const userSeeds = require('./userSeeds.json');
-// const productSeeds = require('./productSeeds.json')
 
 db.once('open', async () => {
   await Product.deleteMany();
@@ -91,7 +89,7 @@ db.once('open', async () => {
     phone: "66664453",
     email: "drew@email.com",
     password: "password01",
-    orders: [ 1, 
+    orders: [ 
     ]
   });
 
@@ -104,7 +102,7 @@ db.once('open', async () => {
     orders: [
 
       {
-        products: [products._id]
+        "products": ['1']
       }
 
     ]

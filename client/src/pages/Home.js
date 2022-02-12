@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <main>
       <div className="hero-background">
-      <div className="flex-row justify-center hero-title">Iso Meals
+      {/* <div className="flex-row justify-center hero-title">Iso Meals
       </div>
-      <div className="hero-description flex-row justify-center"> Meals made easy for you during isolation </div>
+      <div className="hero-description flex-row justify-center"> Meals made easy for you during isolation </div> */}
       <div className="hero-para flex-row justifty-center">
         <br></br>
       Are you feeling unwell? <br> 
@@ -22,6 +22,7 @@ const Home = () => {
       </br>
       </div>
       </div>
+      
 
     </main>
   );

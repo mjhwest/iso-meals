@@ -65,13 +65,18 @@ function App() {
             {/** **/}
             <Route exact path="/products">
               <Products />
+              <main>
+              <Container> </Container>  
+              <h1> Food Bundles </h1>
+              </main> 
+
             </Route>
             {/** **/}
             <Route exact path="/what-we-do">
               <What />
             </Route>
           </div>
-          
+    
           <Footer />
         </div>
       </Router>
