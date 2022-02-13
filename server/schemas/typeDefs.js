@@ -36,7 +36,10 @@ const typeDefs = gql`
     description: String 
     image: String 
     price: String! 
-    quantity: Int
+    rating: Int 
+    numReviews: Int 
+    countInStock: Int
+
   }
 
   type Query {
@@ -52,7 +55,7 @@ const typeDefs = gql`
     addUser(username: String!, address: String!, phone: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addOrder(products: [ID]!): Order
-    updateProduct(_id: ID!, quantity: Int!): Product
+    updateProduct(_id: ID!, countInStock: Int!): Product
     updateUser(firstName: String, lastName: String, email: String, password: String): User
     Order(_id: ID!): Order
   }
@@ -61,6 +64,7 @@ const typeDefs = gql`
 
 module.exports = typeDefs;
 
+    // quantity: Int - THIS WAS REMOVED FROM PRODUCT 13-2nd 
 // categories: [Category] - this was removed from query. 
 // products(category: ID, name: String): [Product] this was remove from query 
 // category: Category - this was removed from product
