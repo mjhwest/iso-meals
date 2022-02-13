@@ -42,9 +42,11 @@
 
 //TRY THIS 
 const express = require('express')
+const { ApolloServer } = require('apollo-server-express');
 const products = require('./seeders/products')
 const router = express.Router();
 const cors = require("cors");
+require('dotenv').config()
 
 const app = express();
 
@@ -54,7 +56,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('API WORKING')
+  res.send('API WORKING...')
 })
 
 app.get('/api/products', (req, res) => {
@@ -79,7 +81,8 @@ app.get('/api/products/:id', (req, res) => {
   res.json(product)
 })
 
+const PORT = process.env.PORT || 5000;
 
-app.listen(5000, console.log('Server running on port 5000'))
+app.listen(PORT, console.log(`API server running on port http://localhost:${PORT}`))
 
 
