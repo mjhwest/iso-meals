@@ -13,6 +13,7 @@ const typeDefs = gql`
     email: String!
     phone: String!
     orders: [Order] 
+    isAdmin: Boolean!
   }
 
   type Order { 
