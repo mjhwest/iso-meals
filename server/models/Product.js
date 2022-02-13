@@ -18,11 +18,20 @@ const productSchema = new Schema({
     type: Number,
     required: true,
   },
-  quantity: {
-    type: Number,
-    min: 0,
-    default: 0
+  // quantity: {
+  //   type: Number,
+  //   min: 0,
+  //   default: 0
+  // },
+  rating: {
+    type: Number
   },
+  numReviews: {
+    type: Number
+  },
+  countInStock: {
+    type: Number
+  }
   // category: {
   //   type: Schema.Types.ObjectId,
   //   ref: 'Category',
