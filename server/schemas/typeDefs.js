@@ -71,7 +71,8 @@ module.exports = typeDefs;
 // user(username: String!): User - remove from query
 
 
-
+//THIS WAS CHANGED TO countInStock instead of quantity. 
+// updateProduct(_id: ID!, quantity : Int!): Product
 
 //REMEMBER 
 // Query ; 'like a get request' it only retrives informatoin
