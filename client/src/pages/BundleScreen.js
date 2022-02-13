@@ -6,6 +6,7 @@ import products from "../products";
 import { useParams } from "react-router-dom";
 import axios from 'axios'
 
+
 const BundleScreen = ({parent, props }) => {
   const params = useParams();
   console.log(props)
