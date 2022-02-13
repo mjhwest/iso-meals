@@ -1,13 +1,34 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import Rating from "../components/Rating/Rating";
 import products from "../products";
 import { useParams } from "react-router-dom";
+import axios from 'axios'
+
+const BundleScreen = ({parent, props }) => {
+  const params = useParams();
+  console.log(props)
+  const [product, setProducts ] = useState([])
 
 
-const BundleScreen = ({ match }) => {
-  const product = products.find((p) => p._id === match.params.id);
+  console.log(params)
+  useEffect(()=> {
+    axios.get(`http://localhost:5000/api/products/${params.id}`)
+    .then(res => {
+        console.log(res)
+        setProducts(res.data)
+    })
+    .catch(err =>{
+        console.log(err)
+    })
+}, [params.id])
+
+
+
+  // const product = products.find((p) => p._id === match.params.id);
+
+  console.log(product.image)
 
   return (
     <>
@@ -16,7 +37,9 @@ const BundleScreen = ({ match }) => {
       </Link>
       <Row>
         <Col md={6}>
+          {/* <img src={product.image}  alt={product.name} className="fluid"/> */}
             <Image src={product.image}  alt={product.name} fluid/>
+            
           {/* <Image src={product.image} alt={product.name} fluid /> */}
         </Col>
 
