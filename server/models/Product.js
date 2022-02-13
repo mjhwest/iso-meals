@@ -2,14 +2,32 @@ const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
 
+
+const reviewSchema = new Schema ({
+  name: {type: String, required: true}, 
+  //this will be individual review rating, rating further down is avg of all reviews. 
+  rating: {type: Number, required: true}, 
+  comment: {type: String, required: true},  
+}, {
+  timestamps: true, 
+})
+
 const productSchema = new Schema({
+// user field added i want to know which user (admin) created whihc product. 
+  user: {
+    type: mongoose.Schema.Types.ObjectId, 
+    required: true, 
+    ref: 'User'
+  },
+
   name: {
     type: String,
     required: true,
     trim: true
   },
   description: {
-    type: String
+    type: String,
+    required: true, 
   },
   image: {
     type: String
@@ -24,6 +42,12 @@ const productSchema = new Schema({
   //   min: 0,
   //   default: 0
   // },
+
+//added Reviews 
+//reviews will be an array as a product can have many reviews. 
+
+  reviews: [reviewSchema], 
+
   rating: {
     type: Number,
     required: true, 
@@ -44,7 +68,11 @@ const productSchema = new Schema({
   //   ref: 'Category',
   //   required: true
   // }
-});
+}, 
+{
+  timestamps: true, 
+}
+);
 
 const Product = mongoose.model('Product', productSchema);
 
