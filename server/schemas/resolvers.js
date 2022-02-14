@@ -8,36 +8,16 @@ const resolvers = {
   Query: {
     //find all users
     users: async () => {
-      return User.find();
+      return await User.find();
     },
     //find user by username
     user: async (parent, { _id }) => {
-      return User.findOne({ _id });
+      return await User.findOne({ _id });
     },
-
-    // REMOVE CATEGORY FOR NOW.
-    //find all categories
-    // categories: async () => {
-    // return await Category.find();
-    // },
-
-    //products by cateogry and name
-    // products: async (parent, { category, name }) => {
-    //   const params = {};
-    //   if (category) {
-    //     params.category = category;
-    //   }
-    //   if (name) {
-    //     params.name = {
-    //       $regex: name,
-    //     };
-    //   }
-    //   return await Product.find(params).populate("category");
-    // },
 
     //all products
     products: async () => {
-      return Product.find();
+      return await Product.find();
     },
 
     //product by id
@@ -183,8 +163,8 @@ const resolvers = {
 
     //ORDER MUTATION
     Order: {
-      products(parent) {
-        return Product.find({_id: {$in: parent.products}})
+      products: async (parent) => {
+        return await Product.find({_id: {$in: parent.products}})
        }
     },
   },

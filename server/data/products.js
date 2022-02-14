@@ -1,10 +1,10 @@
 const products = [
     {
-         _id:'1', 
+        //  _id:'1', 
         name: "Vegan Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days.",
-        image: './images/vegan.jpg',
-        price: 100,
+        image: '/images/vegan.jpg',
+        price: 120,
         // quantity :100, 
         rating: 4.5,
         numReviews: 12,
@@ -12,10 +12,10 @@ const products = [
 
       }, 
       {
-        _id: '2', 
+        // _id: '2', 
         name: "Vegan Plus Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks",
-        image: './images/veganplus.jpg',
+        image: '/images/veganplus.jpg',
         price: 120,
         // quantity :50,
         rating: 4,
@@ -23,7 +23,7 @@ const products = [
         countInStock: 100
       },
       {
-        _id: '3', 
+        // _id: '3', 
         name: "Vegan Deluxe Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks with specality drinks",
         image: './images/vegandeluxe.jpg',
@@ -34,7 +34,7 @@ const products = [
         countInStock: 110
       },
       {
-        _id: '4', 
+        // _id: '4', 
         name: "Vegetarian Bundle", 
         description: "Vegetarian breakfast, lunch and dinner for 7 days.",
         image: './images/vegetarian.jpg',

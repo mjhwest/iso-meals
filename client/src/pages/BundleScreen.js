@@ -9,7 +9,7 @@ import axios from 'axios'
 
 const BundleScreen = ({parent, props }) => {
   const params = useParams();
-  console.log(props)
+  // console.log(props)
   const [product, setProducts ] = useState([])
 
 
@@ -29,7 +29,7 @@ const BundleScreen = ({parent, props }) => {
 
   // const product = products.find((p) => p._id === match.params.id);
 
-  console.log(product.image)
+  // console.log(product.image)
 
   return (
     <>

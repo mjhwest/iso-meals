@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import './Rating.css'
 
 const Rating = ({ value, text, color}) => {
+
   return (
     <div className='rating'>
         <span> 
