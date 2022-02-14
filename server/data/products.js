@@ -15,7 +15,7 @@ const products = [
         // _id: '2', 
         name: "Vegan Plus Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days, plus snacks",
-        image: './images/veganplus.jpg',
+        image: '/images/veganplus.jpg',
         price: 120,
         // quantity :50,
         rating: 4,
