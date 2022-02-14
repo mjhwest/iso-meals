@@ -14,7 +14,7 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
 import What from "./pages/What";
-import BundleScreen from "./pages/BundleScreen";
+import SingleProduct from "./pages/SingleProduct";
 //import components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -55,7 +55,7 @@ function App() {
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/products" component={Products} />
-              <Route exact path="/products/:id" component={BundleScreen} />
+              <Route exact path="/products/:productId" component={SingleProduct} />
             </Container>
           </main>
         </div>

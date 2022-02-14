@@ -1,10 +1,10 @@
 const products = [
     {
-         _id:'1', 
+        //  _id:'1', 
         name: "Vegan Bundle", 
         description: "Vegan breakfast, lunch and dinner for 7 days.",
         image: './images/vegan.jpg',
-        price: 100,
+        price: 120,
         // quantity :100, 
         rating: 4.5,
         numReviews: 12,

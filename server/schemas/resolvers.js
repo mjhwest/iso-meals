@@ -15,29 +15,9 @@ const resolvers = {
       return User.findOne({ _id });
     },
 
-    // REMOVE CATEGORY FOR NOW.
-    //find all categories
-    // categories: async () => {
-    // return await Category.find();
-    // },
-
-    //products by cateogry and name
-    // products: async (parent, { category, name }) => {
-    //   const params = {};
-    //   if (category) {
-    //     params.category = category;
-    //   }
-    //   if (name) {
-    //     params.name = {
-    //       $regex: name,
-    //     };
-    //   }
-    //   return await Product.find(params).populate("category");
-    // },
-
     //all products
     products: async () => {
-      return Product.find();
+      return await Product.find();
     },
 
     //product by id

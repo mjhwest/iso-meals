@@ -37,7 +37,7 @@ const typeDefs = gql`
     description: String 
     image: String 
     price: String! 
-    rating: Int 
+    rating: Float 
     numReviews: Int 
     countInStock: Int
 
@@ -46,7 +46,7 @@ const typeDefs = gql`
   type Query {
     users: [User]
     user(_id: ID!):User
-    products(name: String): [Product]
+    products: [Product]
     product(_id: ID!): Product
     order(_id: ID!): Order
     checkout(products: [ID]): Checkout
