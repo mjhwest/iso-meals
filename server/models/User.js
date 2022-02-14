@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
-//REQUIRE ORDER AS A USER COULD HAVE MORE THAN 1 ORDER
 const Order = require("./Order");
 
 const userSchema = new Schema({

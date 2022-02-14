@@ -71,15 +71,12 @@ module.exports = typeDefs;
 // category: Category - this was removed from product
 // user(username: String!): User - remove from query
 
-
 //THIS WAS CHANGED TO countInStock instead of quantity. 
 // updateProduct(_id: ID!, quantity : Int!): Product
 
 //REMEMBER 
 // Query ; 'like a get request' it only retrives informatoin
 // Mutation: Anything that changes the data in the back end. 
-
-
 
 // NOTE: 
 // orders: [Order] -----THIS IS AN ARRAY AS A USER COULD HAVE MANY ORDERS 

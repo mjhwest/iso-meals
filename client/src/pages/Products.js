@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-//useState hook, to useState in functional components
-// useEffect hook to make a request to backend (server)
+import React from "react";
 import Product from "../components/Product/Product.js";
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS} from '../utils/queries';
@@ -16,7 +14,6 @@ const Products = () => {
     <>
       <h1> View Our Food Bundles</h1>
       <Row>
-        {/* TRYING TO LOOP THROUGH PRODUCTS.js using.map to make a list  */}
         {
         loading ? (
           <div> Loading</div>

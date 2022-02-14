@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import {
   ApolloClient,
   InMemoryCache,
@@ -13,7 +13,6 @@ import Home from "./pages/Home";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 import Products from "./pages/Products";
-import What from "./pages/What";
 import SingleProduct from "./pages/SingleProduct";
 //import components
 import Header from "./components/Header";
@@ -66,66 +65,3 @@ function App() {
 }
 
 export default App;
-
-{
-  /* <ApolloProvider client={client}>
-<Router>
-  <div className="flex-column justify-flex-start min-100-vh">
-    <Header />
-    <div className="container"> */
-}
-{
-  /** **/
-}
-// <Route exact path="/">
-//   <Home />
-// </Route>
-{
-  /** **/
-}
-// <Route exact path="/login">
-//   <Login />
-// </Route>
-{
-  /** **/
-}
-// <Route exact path="/signup">
-//   <Signup />
-// </Route>
-{
-  /** **/
-}
-{
-  /* UNDO TO HERE */
-}
-// <Route exact path="/products">
-//   <main>
-//     <Container>
-//       <Products />
-//     </Container>
-//   </main>
-// </Route>
-{
-  /** **/
-}
-// <Route exact path="/products/:id">
-//   <main>
-//     <Container>
-//       <BundleScreen />
-//     </Container>
-//   </main>
-// </Route>
-{
-  /** **/
-}
-{
-  /* <Route exact path="/what-we-do">
-        <What />
-      </Route> */
-}
-//     </div>
-
-//     <Footer />
-//   </div>
-// </Router>
-// </ApolloProvider>

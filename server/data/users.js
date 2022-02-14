@@ -1,6 +1,3 @@
-//create array of users 
-//make 1 admin 
-
 const users = [
 
     {

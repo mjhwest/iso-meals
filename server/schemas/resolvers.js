@@ -72,11 +72,8 @@ const resolvers = {
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`
       });
-
       return { session: session.id };
     }
-
-    
   },
 
   Mutation: {
@@ -101,29 +98,12 @@ const resolvers = {
       }
 
       const correctPw = await user.isCorrectPassword(password);
-
       if (!correctPw) {
         throw new AuthenticationError("Incorrect credentials");
       }
-
       const token = signToken(user);
-
       return { token, user };
     },
-
-    //ADD ORDER
-    // addOrder: async (parent, { products }, context) => {
-    //   console.log(context);
-    //   if (context.user) {
-    //     const order = new Order({ products });
-    //     await User.findByIdAndUpdate(context.user._id, {
-    //       $push: { orders: order },
-    //     });
-    //     return order;
-    //   }
-
-    //   throw new AuthenticationError("Not logged in");
-    // },
 
     //ADD ORDER VERSION 2
       addOrder: async (parent, { products }, context) => {
@@ -135,10 +115,8 @@ const resolvers = {
           });
           return order;
         }
-  
         throw new AuthenticationError("Not logged in");
       },
-
 
     //UPDATE USER
     updateUser: async (parent, args, context) => {
@@ -147,7 +125,6 @@ const resolvers = {
           new: true,
         });
       }
-
       throw new AuthenticationError("Not logged in");
     },
 

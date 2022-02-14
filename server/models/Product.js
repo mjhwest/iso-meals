@@ -5,7 +5,6 @@ const { Schema } = mongoose;
 const reviewSchema = new Schema(
   {
     name: { type: String, required: true },
-    //this will be individual review rating, rating further down is avg of all reviews.
     rating: { type: Number, required: true },
     comment: { type: String, required: true },
   },
@@ -40,15 +39,9 @@ const productSchema = new Schema(
       required: true,
       default: 0,
     },
-    // quantity: {
-    //   type: Number,
-    //   min: 0,
-    //   default: 0
-    // },
-
+  
     //added Reviews
     //reviews will be an array as a product can have many reviews.
-
     reviews: [reviewSchema],
 
     rating: {
