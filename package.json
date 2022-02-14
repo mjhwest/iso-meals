@@ -11,7 +11,9 @@
         "seed": "cd server && npm run seed",
         "build": "cd client && npm run build",
         "server": "nodemon server/server",
-        "client": "npm start ---prefix client"
+        "client": "npm start ---prefix client",
+        "data:import": "node server/seed",
+        "data:destroy": "node server/seed -d"
     },
     "keywords": [],
     "author": "",
@@ -22,6 +24,7 @@
     },
     "dependencies": {
         "dotenv": "^16.0.0",
+        "express-async-handler": "^1.2.0",
         "react-share": "^4.4.0"
     }
 }

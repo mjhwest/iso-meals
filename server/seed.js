@@ -3,7 +3,10 @@ const { User, Product, Order } = require('./models');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const dotenv = require ('dotenv')
+//get the user data and putting into DB
 const users = require('./data/users')
+
+//getting the product data and putting into DB 
 const products = require('./data/products')
 require('dotenv').config()
 
@@ -21,6 +24,7 @@ const importData = async () => {
       //import users 
      const createdUsers = await User.insertMany(users)
 
+      //[0] as its first user from User
      const adminUser = createdUsers[0]._id
 
      const sampleProducts = products.map(product => {
