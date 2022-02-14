@@ -15,7 +15,7 @@ console.log(productId)
 
 const { loading, data } = useQuery(QUERY_SINGLE_PRODUCT, {
   // Pass the `thoughtId` URL parameter into query to retrieve this thought's data
-  variables: { _id: productId },
+  variables: {id: productId },
 });
 
 const product = data?.product || {};
@@ -46,7 +46,7 @@ return (
             </ListGroup.Item>
             <ListGroup.Item>
               <Rating
-                value={product.rating || 1}  
+                value={product.rating}  
                 text={`${product.numReviews} reviews`}
 
               />

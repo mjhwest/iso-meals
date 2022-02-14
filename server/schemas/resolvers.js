@@ -8,11 +8,11 @@ const resolvers = {
   Query: {
     //find all users
     users: async () => {
-      return User.find();
+      return await User.find();
     },
     //find user by username
     user: async (parent, { _id }) => {
-      return User.findOne({ _id });
+      return await User.findOne({ _id });
     },
 
     //all products
@@ -163,8 +163,8 @@ const resolvers = {
 
     //ORDER MUTATION
     Order: {
-      products(parent) {
-        return Product.find({_id: {$in: parent.products}})
+      products: async (parent) => {
+        return await Product.find({_id: {$in: parent.products}})
        }
     },
   },

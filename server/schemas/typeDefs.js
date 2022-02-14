@@ -37,7 +37,7 @@ const typeDefs = gql`
     description: String 
     image: String 
     price: String! 
-    rating: Float 
+    rating: Float!
     numReviews: Int 
     countInStock: Int
 

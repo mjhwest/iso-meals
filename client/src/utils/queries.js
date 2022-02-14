@@ -41,6 +41,7 @@ query product($id: ID!) {
     rating
     numReviews
     countInStock
+    price
   }
 }
 
