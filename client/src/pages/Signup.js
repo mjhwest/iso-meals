@@ -12,7 +12,7 @@ const Signup = () => {
     address: '',
     phone: '',
     email: '',
-    password: ''
+    password: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
