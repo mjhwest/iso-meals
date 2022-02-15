@@ -50,9 +50,9 @@ const Rating = ({ value, text, color}) => {
             style={{color}} 
             className={
                 value >= 4 
-                ? 'fa-solid fa-star-stroke'
+                ? 'fa-solid fa-star'
                 : value >= 3.5
-                ? 'fa-star-half'
+                ? 'fa-regular fa-star-half-stroke'
                 : 'far fa-star'
                 }
                 ></i>
