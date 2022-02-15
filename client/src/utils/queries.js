@@ -6,10 +6,11 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
-        _id
-        thoughtText
-        createdAt
+      address
+      cart {
+        name
+        price
+        description
       }
     }
   }
@@ -43,6 +44,11 @@ query product($id: ID!) {
     countInStock
     price
   }
+}
+`
+export const QUERY_CART = gql`
+query user {
+  cart
 }
 
 `
