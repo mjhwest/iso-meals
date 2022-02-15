@@ -1,14 +1,15 @@
+require('dotenv').config()
+
 const db = require('./config/connection');
 const { User, Product, Order } = require('./models');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const dotenv = require ('dotenv')
 //get the user data and putting into DB
 const users = require('./data/users')
 
 //getting the product data and putting into DB 
 const products = require('./data/products')
-require('dotenv').config()
+
 
 db.once('open', async () => {
 

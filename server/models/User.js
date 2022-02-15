@@ -40,6 +40,10 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref:'Order'
   }],
+  cart: [{
+    type: Schema.Types.ObjectId,
+    ref:'Product'
+  }],
 });
 
 userSchema.pre("save", async function (next) {
