@@ -7,18 +7,23 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import {ADD_TO_CART} from "../utils/mutations"
 
+import {QUERY_CART} from "../utils/queries"
+//need a query to load cart details 
 
 const Cart = () => {
 
+    const { loading, data  } = useQuery(QUERY_CART)
+
+    // 1) useQuery, to ask back end what is in the cart 
 
     return (
         <>
         <h1> Your Food Bundles</h1>
-         <Link className="btn btn-dark my-3" to="/">
+         <Link className="btn btn-dark my-3" to="/products">
         Go Back
       </Link>
       <Col md={6}>
-          <Image src={addToCart.image} alt={addToCart.name} fluid />
+          {/* <Image src={addToCart.image} alt={addToCart.name} fluid /> */}
         </Col>
         
         </>

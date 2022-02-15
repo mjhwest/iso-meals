@@ -48,7 +48,14 @@ query product($id: ID!) {
 `
 export const QUERY_CART = gql`
 query user {
-  cart
+  cart {
+   _id
+   name
+   description
+   image
+   price
+   countInStock
+  }
 }
-
 `
+
