@@ -12,7 +12,7 @@ return (
 <Card className="my-3 p-3 rounded">
 
       <Card.Body>
-        <Link to={`/cart/${user._id}`}>
+        <Link to={`/cart/${cart._id}`}>
           <Card.Title as="div">
             <div className="card-body-title">
               <strong>{product.name}</strong>

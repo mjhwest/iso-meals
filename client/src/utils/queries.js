@@ -62,11 +62,11 @@ export const QUERY_CART = gql`
 query user {
   user {
     cart {
+      _id
       name
       description
       price
       image
-      _id
     }
   }
 }

@@ -31,7 +31,7 @@ const Cart = () => {
     <Row>
       {
           loading ? (
-              <div> Loading </div>
+              <div> Loading...</div>
           ) : (
               cart?.map((cart) => (
                   <Col key={cart._id} sm={12} md={6} lg={4} ex={3} >
