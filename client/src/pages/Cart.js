@@ -20,18 +20,28 @@ const Cart = () => {
   console.log(data)
 
   return (
-    <>
-      <Link className="btn btn-dark my-3" to="/products">
-        Go Back
-      </Link>
-      <Row>
-        <h1> Your Food Bundles </h1>
-        <h2> TEST</h2>
-      </Row>
 
-      <Row> 
-          
-      </Row>
+    <>
+
+    <Link className="btn btn-dark my-3" to="/products">
+        Go Back
+      </Link> 
+      <h2> Your Cart Includes</h2>
+
+    <Row>
+      {
+          loading ? (
+              <div> Loading </div>
+          ) : (
+              cart?.map((cart) => (
+                  <Col key={cart._id} sm={12} md={6} lg={4} ex={3} >
+                      <Cart cart={cart} />
+                  </Col>
+              ))
+          )
+      }
+    </Row>
+
 
 
       

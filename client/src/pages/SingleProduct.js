@@ -13,7 +13,7 @@ import { ADD_TO_CART } from "../utils/mutations";
 const SingleProduct = () => {
 
   //added 1 line 1.35pm Weds
-  // const [qty, setQty] = useState()
+  const [qty, setQty] = useState()
 
   const { productId } = useParams();
   const [addToCart, {error}] = useMutation(ADD_TO_CART);
@@ -92,7 +92,7 @@ const SingleProduct = () => {
               </ListGroup.Item>
 
               {/* THIS WAS ADDED WEDS 1.35pm */}
-              {/* {product.countInStock > 0 && (
+              {product.countInStock > 0 && (
                 <ListGroup.Item> 
                   <Row> 
                     <Col> Qty</Col>
@@ -111,7 +111,7 @@ const SingleProduct = () => {
                     </Col>
                   </Row>
                 </ListGroup.Item>
-              )} */}
+              )}
 
 
               <ListGroup.Item>

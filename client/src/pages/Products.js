@@ -10,6 +10,8 @@ const Products = () => {
   const { loading, data } = useQuery(QUERY_ALL_PRODUCTS);
   const products = data?.products || [];
 
+  console.log(products)
+
   return (
     <>
       <h1> View Our Food Bundles</h1>
