@@ -12,9 +12,13 @@ import {QUERY_CART} from "../utils/queries"
 
 const Cart = () => {
 
-    const { loading, data  } = useQuery(QUERY_CART)
+    const {products} = useParams(); 
 
     // 1) useQuery, to ask back end what is in the cart 
+    const { loading, data  } = useQuery(QUERY_CART)
+    const cart = data?.cart; 
+
+
 
     return (
         <>
@@ -25,6 +29,10 @@ const Cart = () => {
       <Col md={6}>
           {/* <Image src={addToCart.image} alt={addToCart.name} fluid /> */}
         </Col>
+
+        {/* <Col md={3}>
+        <h2> {cart.name} </h2>
+        </Col> */}
         
         </>
     )

@@ -46,16 +46,28 @@ query product($id: ID!) {
   }
 }
 `
+// export const QUERY_CART = gql`
+// query user {
+//   cart {
+//    _id
+//    name
+//    description
+//    image
+//    price
+//    countInStock
+//   }
+// }
+// `
 export const QUERY_CART = gql`
 query user {
-  cart {
-   _id
-   name
-   description
-   image
-   price
-   countInStock
+  user {
+    cart {
+      name
+      description
+      price
+      image
+      _id
+    }
   }
 }
 `
-
