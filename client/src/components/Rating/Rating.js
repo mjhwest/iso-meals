@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import './Rating.css'
+import './rating.css'
 
 const Rating = ({ value, text, color}) => {
 

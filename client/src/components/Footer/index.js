@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./footer.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { useLocation, useHistory } from "react-router-dom";
 import {

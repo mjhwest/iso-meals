@@ -1,7 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import Rating from "../Rating/Rating";
-import "./Product.css";
+import "./product.css";
 import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {

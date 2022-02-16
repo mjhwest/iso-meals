@@ -21,7 +21,7 @@ const Products = () => {
           <div> Loading</div>
         ) : (
         products?.map((product) => (
-          <Col key={product._id} sm={12} md={6} lg={4} ex={3}>
+          <Col key={product._id} sm={12} md={6} lg={4} ex={1}>
             <Product product={product} />
           </Col>
         )))}
