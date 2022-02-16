@@ -17,6 +17,8 @@ const Cart = () => {
   const { loading, data } = useQuery(QUERY_CART);
   const cart = data?.cart;
 
+  console.log(data)
+
   return (
     <>
       <Link className="btn btn-dark my-3" to="/products">
