@@ -25,7 +25,24 @@ const Cart = () => {
   }
 
 
-  // const [cartItem, addToCart ] = useState("") 
+
+  // const [cartItem, { error }] = useQuery(QUERY_CART, {
+  //   update(cache, { data: { cartItem } }) {
+  //     try {
+  //       const { cartData } = cache.readQuery({ query:QUERY_CART });
+  //       cache.writeQuery({
+  //         query: QUERY_CART,
+  //         data: { posts: [cartData, ...cartItem] },
+  //       });
+  //     } catch (err) {
+  //       console.error(err);
+  //     }
+  //   },
+  // });
+
+
+
+  const [cartItem, addToCart ] = useState(" ") 
 
   return (
     // USE THIS *************************************************************************************************************************************************************************************
