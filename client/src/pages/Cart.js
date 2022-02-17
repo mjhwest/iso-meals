@@ -71,35 +71,7 @@ const Cart = () => {
       )}
     </>
 
-    // TO THIS *******************************************************************************************************************************************************************************************
-
-    // <>
-    // <Link className="btn btn-dark my-3" to="/products">
-    //     Go Back
-    //   </Link>
-    //   <div className="cart-title"> Your Cart Includes</div>
-    // <Row>
-    //   {
-    //       loading ? (
-    //           <div> Loading...</div>
-    //       ) : (
-    //           cartData.map((cartItem) => (
-    //               <Col key={cartItem._id} sm={12} md={6} lg={4} ex={3} >
-    //                   {/* <Cart  /> We're already in the Cart component. If you try to render a component inside itself it will cause an infinite loop */}
-    //                  <div className="cart-list-items my3 p-3 rounded">
-    //                   <h1>
-    //                   {cartItem.name},
-    //                   </h1>
-    //                   {cartItem.description}
-    //                   ${cartItem.price}
-    //                  </div>
-
-    //               </Col>
-    //           ))
-    //       )
-    //   }
-    // </Row>
-    // </>
+ 
   );
 };
 
