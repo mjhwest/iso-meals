@@ -17,10 +17,13 @@
 }
 
 .btn-checkout {
-    background-color: #1a1a1a;
+    background-color: #23a702 !important;
     color: #d9e9e8;
-    font-size: .875rem;
+    font-size: .875rem !important;
     text-transform: uppercase;
-    width: auto;
+    /* width: auto; */
     align-items: center !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: 600 !important;
+    line-height: 1.5rem !important;
 }
