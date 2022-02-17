@@ -4,15 +4,14 @@ import { useParams } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button, Form } from "react-bootstrap";
+import { Row, Col, Image, ListGroup, Card, Button, Form, Modal } from "react-bootstrap";
 import { QUERY_SINGLE_PRODUCT } from "../utils/queries";
 import Rating from "../components/Rating/Rating";
 import { ADD_TO_CART } from "../utils/mutations";
  
 
 const SingleProduct = () => {
-
-  //added 1 line 1.35pm Weds
+  const [show, setShow] = useState(false);
   const [qty, setQty] = useState()
 
   const { productId } = useParams();
@@ -43,6 +42,12 @@ const SingleProduct = () => {
     console.log(data)
     console.log("Adding to cart");
   }
+
+  //MODAL ATTEMPT HERE
+
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   console.log(product);
   return (
@@ -120,9 +125,26 @@ const SingleProduct = () => {
                   type="button"
                   disabled={product.countInStock === 0}
                   onClick={handleAddToCart}
+                  // variant="primary"
                 >
                   Add to Cart
                 </Button>
+{/* 
+
+                <Modal show={show} onHide={handleAddToCart}>
+                  <Modal.Header closeButton> 
+                  <Modal.Title> Bundle Added To Cart 
+                  </Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body> Go to checkout to confirm your order </Modal.Body>
+                  <Modal.Footer> 
+                    <Button variant="primary" onClick={handleAddToCart}>
+                      Close
+                    </Button>
+                  </Modal.Footer>
+                </Modal> */}
+
+
               </ListGroup.Item>
             </ListGroup>
           </Card>

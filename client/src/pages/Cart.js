@@ -13,11 +13,19 @@ import Auth from "../utils/auth";
 const Cart = () => {
   const { products } = useParams();
   const { loading, data } = useQuery(QUERY_CART);
-  const cartData = data?.user?.cart;
+  const cartData = data?.user?.cart || [];
   console.log(cartData);
 
+  function calculateTotal() {
+    let sum = 0;
+    cartData.forEach((product) => {
+      sum += parseInt(product.price);
+    });
+    return sum
+  }
 
-  const [ ] = useState() 
+
+  // const [cartItem, addToCart ] = useState("") 
 
   return (
     // USE THIS *************************************************************************************************************************************************************************************
@@ -30,7 +38,7 @@ const Cart = () => {
 
           <div className="cart-title"> Your Cart Includes</div>
 
-          <Row>
+          <Row className="">
             {loading ? (
               <div> Loading...</div>
             ) : (
@@ -59,7 +67,7 @@ const Cart = () => {
             Go To Checkout
           </Link>
 
-          <div className="total-cost text-end"> SUM OF ALL BUNDLES</div>
+          <div className="total-cost text-end"> Total Price =  ${calculateTotal()}</div>
         </>
       ) : (
         <div className="cart-login-prompt">
