@@ -12,7 +12,9 @@ import Auth from "../utils/auth";
 
 const Cart = () => {
   const { products } = useParams();
-  const { loading, data } = useQuery(QUERY_CART);
+  const { loading, data } = useQuery(QUERY_CART, {
+    fetchPolicy: "no-cache"
+  });
   const cartData = data?.user?.cart || [];
   console.log(cartData);
 
@@ -23,24 +25,6 @@ const Cart = () => {
     });
     return sum
   }
-
-
-
-  // const [cartItem, { error }] = useQuery(QUERY_CART, {
-  //   update(cache, { data: { cartItem } }) {
-  //     try {
-  //       const { cartData } = cache.readQuery({ query:QUERY_CART });
-  //       cache.writeQuery({
-  //         query: QUERY_CART,
-  //         data: { posts: [cartData, ...cartItem] },
-  //       });
-  //     } catch (err) {
-  //       console.error(err);
-  //     }
-  //   },
-  // });
-
-
 
   const [cartItem, addToCart ] = useState(" ") 
 
