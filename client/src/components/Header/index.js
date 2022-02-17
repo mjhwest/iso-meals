@@ -4,6 +4,7 @@ import './header.css';
 import {Navbar, Nav, Container, NavDropdown} from 'react-bootstrap';
 
 
+
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <span>Hey there, {Auth.getProfile().data.username}!</span>
+              <span>Hey, {Auth.getProfile().data.username}!</span>
               <button className="btn btn-lg btn-light m-2" onClick={logout}>
                 Logout
               </button>
@@ -55,8 +56,6 @@ const Header = () => {
               <Link className="btn btn-lg btn-light m-2"  to="/cart"><i className='fas fa-shopping-cart'></i>
                 Cart
               </Link>
-
-
             </>
           )}
         </div>
