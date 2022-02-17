@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 // Import the `useParams()` hook from React Router
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
@@ -15,6 +15,9 @@ const Cart = () => {
   const { loading, data } = useQuery(QUERY_CART);
   const cartData = data?.user?.cart;
   console.log(cartData);
+
+
+  const [ ] = useState() 
 
   return (
     // USE THIS *************************************************************************************************************************************************************************************
@@ -48,31 +51,26 @@ const Cart = () => {
                 </Col>
               ))
             )}
-
-            <Link className="btn-checkout btn-dark my-3 vertical-center" to="/products">
-              Go To Checkout
-            </Link>
-         
           </Row>
+          <Link
+            className="btn-checkout btn-dark my-3 vertical-center text-start"
+            to="/products"
+          >
+            Go To Checkout
+          </Link>
+
+          <div className="total-cost text-end"> SUM OF ALL BUNDLES</div>
         </>
       ) : (
-        
         <div className="cart-login-prompt">
+          <Link className="btn btn-dark my-3" to="/login">
+            Go To Login
+          </Link>
 
-        <Link className="btn btn-dark my-3" to="/login">
-              Go To Login
-        </Link>
-
-        <h1> To View a Cart, make sure you are logged in! </h1>
-        
+          <h1> To View a Cart, make sure you are logged in! </h1>
         </div>
-
-
-
       )}
     </>
-
- 
   );
 };
 
