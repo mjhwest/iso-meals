@@ -49,9 +49,10 @@ const Cart = () => {
               ))
             )}
 
-            <Link className="btn btn-dark my-3" to="/products">
+            <Link className="btn-checkout btn-dark my-3 vertical-center" to="/products">
               Go To Checkout
             </Link>
+         
           </Row>
         </>
       ) : (
