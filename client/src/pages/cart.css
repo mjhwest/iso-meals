@@ -28,3 +28,8 @@
     line-height: 1.5rem !important;
     margin: 0 auto !important;
 }
+
+.total-cost {
+    font-size: 1.3rem !important;
+    margin-right: 0.938rem;
+}

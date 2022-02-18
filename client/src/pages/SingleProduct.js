@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { useQuery } from "@apollo/client";
 import { Link } from "react-router-dom";
-import { Row, Col, Image, ListGroup, Card, Button, Form, Modal } from "react-bootstrap";
+import { Row, Col, Image, ListGroup, Card,Form, Modal } from "react-bootstrap";
 import { QUERY_SINGLE_PRODUCT } from "../utils/queries";
 import Rating from "../components/Rating/Rating";
 import { ADD_TO_CART } from "../utils/mutations";
+import Button from 'react-bootstrap/Button';
+import 'bootstrap/dist/css/bootstrap.min.css';
  
 
 const SingleProduct = () => {
@@ -96,7 +98,7 @@ const SingleProduct = () => {
                 </Row>
               </ListGroup.Item>
 
-              {/* THIS WAS ADDED WEDS 1.35pm */}
+        
               {product.countInStock > 0 && (
                 <ListGroup.Item> 
                   <Row> 
@@ -129,7 +131,7 @@ const SingleProduct = () => {
                 >
                   Add to Cart
                 </Button>
-{/* 
+
 
                 <Modal show={show} onHide={handleAddToCart}>
                   <Modal.Header closeButton> 
@@ -142,7 +144,7 @@ const SingleProduct = () => {
                       Close
                     </Button>
                   </Modal.Footer>
-                </Modal> */}
+                </Modal>
 
 
               </ListGroup.Item>

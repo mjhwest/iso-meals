@@ -29,7 +29,6 @@ const Cart = () => {
   const [cartItem, addToCart ] = useState(" ") 
 
   return (
-    // USE THIS *************************************************************************************************************************************************************************************
     <>
       {Auth.loggedIn() ? (
         <>
@@ -61,6 +60,9 @@ const Cart = () => {
               ))
             )}
           </Row>
+
+          <div className="total-cost text-end"> Total Price =  ${calculateTotal()}</div>
+
           <Link
             className="btn-checkout btn-dark my-3 vertical-center text-start"
             to="/products"
@@ -68,7 +70,7 @@ const Cart = () => {
             Go To Checkout
           </Link>
 
-          <div className="total-cost text-end"> Total Price =  ${calculateTotal()}</div>
+
         </>
       ) : (
         <div className="cart-login-prompt">
