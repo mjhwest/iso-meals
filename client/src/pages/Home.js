@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./home.css";
 const Home = () => {
   return (
@@ -13,6 +14,13 @@ const Home = () => {
           Simply your food bundle for the week and we will deliver it to you!
           <br></br>
         </div>
+        <div className="hero-picture"> 
+        <div className="home-button">
+        <Link className="btn btn-dark my-3" to="/products">
+            Go To Products
+          </Link>
+        </div>
+         </div>
       </div>
     </main>
   );
