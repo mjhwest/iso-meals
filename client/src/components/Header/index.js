@@ -18,7 +18,7 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         <div>
           <Link className="text-light" to="/">
-            <h1 className="m-0 py-1 ">Iso Meals</h1>
+            <h1 className="m-0 py-1 page-title ">Iso Meals</h1>
           </Link>
           <p className="m-0 ">Meals For You During Isolation </p>
         </div>
