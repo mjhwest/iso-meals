@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
-
+import "./login.css";
 import Auth from "../utils/auth";
 
 const Login = (props) => {
@@ -55,7 +55,7 @@ const Login = (props) => {
               <form onSubmit={handleFormSubmit}>
                 <input
                   className="form-input"
-                  placeholder="Your email"
+                  placeholder="Please enter your email"
                   name="email"
                   type="email"
                   value={formState.email}
@@ -63,7 +63,7 @@ const Login = (props) => {
                 />
                 <input
                   className="form-input"
-                  placeholder="******"
+                  placeholder=" Please enter your password"
                   name="password"
                   type="password"
                   value={formState.password}

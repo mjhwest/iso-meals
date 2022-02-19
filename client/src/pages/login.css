@@ -1,0 +1,24 @@
+.card .card-header {
+    justify-content: center !important;
+    text-align: center !important;
+    background-color: #598f1d !important;
+    color: orange !important;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+.card-body p {
+    font-size: 1.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: orange;
+}
+
+.card {
+    background-color: rgb(232, 228, 219) !important;
+    border: 1px solid rgb(20 19 18) !important;
+}
+
+form .form-input {
+    background-color: rgb(232, 228, 219) !important;
+    color: rgb(0, 0, 0);
+}
