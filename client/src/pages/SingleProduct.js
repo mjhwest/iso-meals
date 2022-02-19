@@ -9,7 +9,7 @@ import { QUERY_SINGLE_PRODUCT } from "../utils/queries";
 import Rating from "../components/Rating/Rating";
 import { ADD_TO_CART } from "../utils/mutations";
 import Button from 'react-bootstrap/Button';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './singleproduct.css'; 
  
 
 const SingleProduct = () => {
@@ -38,6 +38,13 @@ const SingleProduct = () => {
       const { data } = await addToCart({
         variables: { productId },
       });
+
+      if (addToCart){ 
+        console.log('success you added to cart' )
+        const modal = document.querySelector(".my-modal")
+        modal.classList.add( "view") 
+       }
+
     } catch (e) {
       console.error(e);
     }
@@ -55,10 +62,18 @@ const SingleProduct = () => {
   return (
     <>
 
-    <div className="modal"> 
-    
-      <h1> Poo</h1>
-<p> im hungry </p>
+    <div className="my-modal"> 
+      <h1 className="modal-title"> You successfully added a bundle</h1>
+      <p> Keep shopping, or go to cart to confirm order. </p>
+      <div className="button-container">
+      <Link className="btn btn-dark my-3" to="/products">
+       Continue Shopping 
+      </Link>
+      <Link className="btn btn-dark my-3" to="/cart">
+        Go To Cart 
+      </Link>
+      
+        </div> 
     </div>
 
       <Link className="btn btn-dark my-3" to="/products">
@@ -140,18 +155,7 @@ const SingleProduct = () => {
                 </Button>
 
 
-                <Modal show={show} onHide={handleAddToCart}>
-                  <Modal.Header closeButton> 
-                  <Modal.Title> Bundle Added To Cart 
-                  </Modal.Title>
-                  </Modal.Header>
-                  <Modal.Body> Go to checkout to confirm your order </Modal.Body>
-                  <Modal.Footer> 
-                    <Button variant="primary" onClick={handleAddToCart}>
-                      Close
-                    </Button>
-                  </Modal.Footer>
-                </Modal>
+        
 
 
               </ListGroup.Item>

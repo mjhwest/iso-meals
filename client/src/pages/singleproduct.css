@@ -1,0 +1,51 @@
+/* .my-modal {
+    position: absolute;
+    width: 25%;
+    height: 25%;
+    background-color: rgb(150, 118, 118);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999999;
+    display: none;
+} */
+
+.my-modal {
+    position: fixed;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #49833b;
+    text-align: center;
+    /* / Change the width of the modal (may need to be larger on smaller screens - ie. 80% or larger for screens less than 768px) / width: 60%;
+    / Height will fit whatever content you want to put in there / */
+    height: fit-content;
+    padding: 3rem;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 33px 8px rgba(0, 0, 0, 0.65);
+    display: none;
+    z-index: 9999999999999999999;
+    color: orange;
+}
+
+.view {
+    display: block;
+}
+
+.button-container {
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+}
+
+.modal-title {
+    color: orange;
+}
+
+@media screen and (max-width: 992px) {
+    .button-container {
+        flex-direction: column;
+    }
+}

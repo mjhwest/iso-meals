@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
@@ -14,9 +14,23 @@ const Header = () => {
   const [isOpened, setOpened] = useState("false");
 
   const MobileClick = () => {
-      console.log("clicked");
-      setOpened(!isOpened);
+    console.log("clicked");
+    setOpened(!isOpened);
   };
+
+  //NOT WORKING*******************
+  // useEffect(() => {
+  //   const checkPageSize = () => {
+  //     var mobileMenu = document.querySelector(".mobile-menu");
+  //     var windowWidth = window.innerWidth;
+  //     if (windowWidth <= 992) {
+  //       console.log("poop");
+  //       setOpened(isOpened)
+  //     }
+  //   };
+
+  //   window.onresize = checkPageSize() 
+  // }, []);
 
   return (
     <header className="nav-container text-light mb-4 py-3 flex-row align-center">
@@ -28,10 +42,9 @@ const Header = () => {
           <p className="m-0 ">Meals For You During Isolation </p>
         </div>
 
-      
         <div className="hamburger" onClick={MobileClick}>
-        <i className="fa-solid fa-burger fa-3x" ></i>
-        
+          <i className="fa-solid fa-burger fa-3x"></i>
+
           {/* <div className="patty"> </div>
           <div className="patty"> </div>
           <div className="patty"> </div> */}
@@ -82,81 +95,80 @@ const Header = () => {
 
         {/* ******************MOBILE DISPLAY************************************************* */}
 
-              <div className="mobile-container"> 
-              
-{/* 
+        <div className="mobile-container">
+          {/* 
         <div className="hamburger" onClick={MobileClick}>
           <div className="patty"> </div>
           <div className="patty"> </div>
           <div className="patty"> </div>
         </div> */}
-        <div className={`mobile-menu ${isOpened ? " " : "opened"} `}>
-          {Auth.loggedIn() ? (
-            <>
-              <span>Hey, {Auth.getProfile().data.username}!</span>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
-              <Link
-                className="btn btn-lg btn-light m-2"
-                to="/products"
-                onClick={MobileClick}
+          <div className={`mobile-menu ${isOpened ? " " : "opened"} `}>
+            {Auth.loggedIn() ? (
+              <>
+                <span>Hey, {Auth.getProfile().data.username}!</span>
+                <button className="btn btn-lg btn-light m-2" onClick={logout}>
+                  Logout
+                </button>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/products"
+                  onClick={MobileClick}
                 >
-                <i className="fa-solid fa-fork-knife"></i>
-                {/* this linnk to icon is not working 
+                  <i className="fa-solid fa-fork-knife"></i>
+                  {/* this linnk to icon is not working 
               https://fontawesome.com/icons/fork-knife?s=solid
             */}
-                Products
-              </Link>
-              <Link
-                className="btn btn-lg btn-light m-2"
-                to="/cart"
-                onClick={MobileClick}
+                  Products
+                </Link>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/cart"
+                  onClick={MobileClick}
                 >
-                <i className="fas fa-shopping-cart"></i>
-                Cart
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link
-                className="btn btn-lg btn-info m-2"
-                to="/login"
-                onClick={MobileClick}
+                  <i className="fas fa-shopping-cart"></i>
+                  Cart
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link
+                  className="btn btn-lg btn-info m-2"
+                  to="/login"
+                  onClick={MobileClick}
                 >
-                Login
-              </Link>
-              <Link
-                className="btn btn-lg btn-light m-2"
-                to="/signup"
-                onClick={MobileClick}
+                  Login
+                </Link>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/signup"
+                  onClick={MobileClick}
                 >
-                <i className="fa-solid fa-user-plus"></i>
-                Signup
-              </Link>
-              <Link
-                className="btn btn-lg btn-light m-2"
-                to="/products"
-                onClick={MobileClick}
+                  <i className="fa-solid fa-user-plus"></i>
+                  Signup
+                </Link>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/products"
+                  onClick={MobileClick}
                 >
-                <i className="fa-solid fa-fork-knife"></i>
-                {/* this linnk to icon is not working 
+                  <i className="fa-solid fa-fork-knife"></i>
+                  {/* this linnk to icon is not working 
               https://fontawesome.com/icons/fork-knife?s=solid
             */}
-                Products
-              </Link>
-              <Link
-                className="btn btn-lg btn-light m-2"
-                to="/cart"
-                onClick={MobileClick}
+                  Products
+                </Link>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/cart"
+                  onClick={MobileClick}
                 >
-                <i className="fas fa-shopping-cart"></i>
-                Cart
-              </Link>
-            </>
-          )}
-        </div>
+                  <i className="fas fa-shopping-cart"></i>
+                  Cart
+                </Link>
+              </>
+            )}
           </div>
+        </div>
       </div>
     </header>
   );
