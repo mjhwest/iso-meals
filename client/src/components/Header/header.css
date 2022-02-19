@@ -4,15 +4,22 @@
 
 .m-0 {
     color: orange;
-    font-family: cursive;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .btn.btn-info {
     background-color: transparent;
+    color: orange;
 }
 
 .btn.btn-info:hover {
-    color: orange;
+    color: rgba(250, 227, 50, 0.981);
+    background-color: transparent;
+}
+
+.btn.btn-light:hover {
+    color: rgba(250, 227, 50, 0.981);
+    background-color: transparent;
 }
 
 .btn.btn-light {
