@@ -21,4 +21,21 @@
         height: 60vh;
         min-width: 100%;
         overflow: none;
+        position: relative;
+    }
+    
+    .home-button {
+        width: fit-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .home-button .btn {
+        background-color: #2392bce3;
+        color: #d9e9e8;
+        font-size: 2rem;
+        padding: 1rem;
+        box-shadow: 0px 0px 43px 12px rgb(218 145 145 / 89%);
     }

@@ -54,6 +54,13 @@ const SingleProduct = () => {
   console.log(product);
   return (
     <>
+
+    <div className="modal"> 
+    
+      <h1> Poo</h1>
+<p> im hungry </p>
+    </div>
+
       <Link className="btn btn-dark my-3" to="/products">
         Go Back
       </Link>

@@ -46,10 +46,12 @@ const Cart = () => {
                 <Col key={cartItem._id} sm={12} md={12} lg={12} ex={12}>
                   {/* <Cart  /> We're already in the Cart component. If you try to render a component inside itself it will cause an infinite loop */}
                   <div className="cart-list-items my3 p-3 rounded">
-                    <div className="product-title"> {cartItem.name}: </div>
+                    <Image src={cartItem.image} className="product-cart-image"/>
+                    <div className="product-title">{cartItem.name}: </div>
                     <Col className="product-details">
                       <div className="product-description col text-start">
                         {cartItem.description}
+                   
                       </div>
                       <div className="product-price col text-end">
                         ${cartItem.price}
