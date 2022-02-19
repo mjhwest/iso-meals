@@ -11,8 +11,7 @@ const Home = () => {
           Have you been told to isolate suddenly? <br></br>
           Let the team at Iso Meals feed you.
           <br></br>
-          Simply your food bundle for the week and we will deliver it to you!
-          <br></br>
+          Simply pick your food bundle, and we will deliver a weeks worth of food to you!         <br></br>
         </div>
         <div className="hero-picture"> 
         <div className="home-button">

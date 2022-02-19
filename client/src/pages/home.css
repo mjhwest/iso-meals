@@ -5,14 +5,17 @@
         /* border-style: solid;
         border-width: 1px; */
         padding-top: -11.5rem !important;
-        margin-top: 10px;
+        margin-top: -2.438rem;
         padding-bottom: 1.5rem;
         /* background-color: rgb(173, 228, 191); */
-        color: rgb(243, 167, 13);
+        color: rgb(17, 16, 14);
+        font-family: 'Roboto Condensed', sans-serif;
     }
     
     .hero-picture {
-        background: url(../../public/images/bowl.jpg) no-repeat;
+        background: url(../../public/images/food.jpg) no-repeat;
+        border-radius: 1rem;
+        box-shadow: 10px 10px 5px black;
         background-size: cover;
         background-position: center;
         height: 60vh;
