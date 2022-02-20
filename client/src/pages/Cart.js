@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 // Import the `useParams()` hook from React Router
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
@@ -13,7 +13,7 @@ import Auth from "../utils/auth";
 const Cart = () => {
   const { products } = useParams();
   const { loading, data } = useQuery(QUERY_CART, {
-    fetchPolicy: "no-cache"
+    fetchPolicy: "no-cache",
   });
   const cartData = data?.user?.cart || [];
   console.log(cartData);
@@ -23,10 +23,10 @@ const Cart = () => {
     cartData.forEach((product) => {
       sum += parseInt(product.price);
     });
-    return sum
+    return sum;
   }
 
-  const [cartItem, addToCart ] = useState(" ") 
+  const [cartItem, addToCart] = useState(" ");
 
   return (
     <>
@@ -46,26 +46,23 @@ const Cart = () => {
                 <Col key={cartItem._id} sm={12} md={12} lg={12} ex={12}>
                   {/* <Cart  /> We're already in the Cart component. If you try to render a component inside itself it will cause an infinite loop */}
                   <div className="cart-list-items my3 p-3 rounded">
-                    <Image src={cartItem.image} className="product-cart-image"/>
+                    <Image
+                      src={cartItem.image}
+                      className="product-cart-image"
+                    />
                     <div className="product-title">{cartItem.name}: </div>
                     <Col className="product-details">
                       <div className="product-description col text-start">
-                        {cartItem.description} 
-                        <div className="remove" >
-
-                        <span
-                        role='img'
-                        aria-label="trash"
-                        >
-                          Remove From Cart  
-                        🗑️
-                        </span>
-                   
-                          </div>
+                        {cartItem.description}
+                        <div className="remove">
+                          <span
+                           role="img" aria-label="trash">
+                            Remove From Cart 🗑️
+                          </span>
+                        </div>
                       </div>
                       <div className="product-price col text-end">
                         ${cartItem.price}
-                 
                       </div>
                     </Col>
                   </div>
@@ -74,7 +71,10 @@ const Cart = () => {
             )}
           </Row>
 
-          <div className="total-cost text-end"> Total Price =  ${calculateTotal()}</div>
+          <div className="total-cost text-end">
+            {" "}
+            Total Price = ${calculateTotal()}
+          </div>
 
           <Link
             className="btn-checkout btn-dark my-3 vertical-center text-start"
@@ -82,8 +82,6 @@ const Cart = () => {
           >
             Go To Checkout
           </Link>
-
-
         </>
       ) : (
         <div className="cart-login-prompt">
