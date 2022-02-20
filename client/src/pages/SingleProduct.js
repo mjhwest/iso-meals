@@ -53,10 +53,11 @@ const SingleProduct = () => {
 
   //MODAL ATTEMPT HERE
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   console.log(product);
+  
   return (
 
     <>
@@ -120,7 +121,7 @@ const SingleProduct = () => {
           </Col>
 
           <Col md={3}>
-            <ListGroup variant="flush">
+            <ListGroup className="product-card-details" variant="flush">
               <ListGroup.Item>
                 <h2>{product.name} </h2>
               </ListGroup.Item>

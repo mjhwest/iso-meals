@@ -1,15 +1,3 @@
-/* .my-modal {
-    position: absolute;
-    width: 25%;
-    height: 25%;
-    background-color: rgb(150, 118, 118);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999999999;
-    display: none;
-} */
-
 .my-modal {
     position: fixed;
     width: auto;
@@ -18,8 +6,6 @@
     transform: translate(-50%, -50%);
     background: #49833b;
     text-align: center;
-    /* / Change the width of the modal (may need to be larger on smaller screens - ie. 80% or larger for screens less than 768px) / width: 60%;
-    / Height will fit whatever content you want to put in there / */
     height: fit-content;
     padding: 3rem;
     border-radius: 6px;
@@ -44,8 +30,22 @@
     color: orange;
 }
 
+.img-fluid,
+.list-group {
+    border: 2px solid black;
+}
+
 @media screen and (max-width: 992px) {
     .button-container {
         flex-direction: column;
     }
+}
+
+.list-group-item {
+    background-color: #92cc84 !important;
+}
+
+.form-control {
+    background-color: #92cc84 !important;
+    border: 2px solid black !important;
 }
