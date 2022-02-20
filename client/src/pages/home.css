@@ -10,12 +10,13 @@
         /* background-color: rgb(173, 228, 191); */
         color: rgb(17, 16, 14);
         font-family: 'Roboto Condensed', sans-serif;
+        font-size: 2rem;
     }
     
     .hero-picture {
         background: url(../../public/images/food.jpg) no-repeat;
         border-radius: 1rem;
-        box-shadow: 10px 10px 5px black;
+        box-shadow: 0px 0px 17px 0px black;
         background-size: cover;
         background-position: center;
         height: 60vh;
@@ -38,4 +39,5 @@
         font-size: 2rem;
         padding: 1rem;
         box-shadow: 0px 0px 43px 12px rgb(218 145 145 / 89%);
+        border-radius: 1rem !important;
     }
