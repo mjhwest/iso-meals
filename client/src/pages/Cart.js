@@ -50,11 +50,22 @@ const Cart = () => {
                     <div className="product-title">{cartItem.name}: </div>
                     <Col className="product-details">
                       <div className="product-description col text-start">
-                        {cartItem.description}
+                        {cartItem.description} 
+                        <div className="remove" >
+
+                        <span
+                        role='img'
+                        aria-label="trash"
+                        >
+                          Remove From Cart  
+                        🗑️
+                        </span>
                    
+                          </div>
                       </div>
                       <div className="product-price col text-end">
                         ${cartItem.price}
+                 
                       </div>
                     </Col>
                   </div>
