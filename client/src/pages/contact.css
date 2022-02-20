@@ -113,11 +113,12 @@
     display: inline-block;
 }
 
-input:focus+.line,
+
+/* input:focus+.line,
 textarea:focus+.line {
     width: 100%;
     transition: width 0.5s ease-in-out;
-}
+} */
 
 input.form-control {
     margin: -0.3rem 0;
@@ -129,4 +130,8 @@ textarea.form-control {
 
 .text {
     color: black;
+}
+
+::placeholder {
+    color: black !important;
 }
