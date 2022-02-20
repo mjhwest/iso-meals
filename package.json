@@ -27,6 +27,7 @@
         "dotenv": "^16.0.0",
         "express-async-handler": "^1.2.0",
         "react-bootstrap": "^2.1.2",
-        "react-share": "^4.4.0"
+        "react-share": "^4.4.0",
+        "react-typed": "^1.2.0"
     }
 }
