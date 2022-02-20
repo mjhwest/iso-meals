@@ -10,7 +10,7 @@
         /* background-color: rgb(173, 228, 191); */
         color: rgb(17, 16, 14);
         font-family: 'Roboto Condensed', sans-serif;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     
     .hero-picture {
@@ -34,7 +34,16 @@
     }
     
     .home-button .btn {
-        background-color: #2392bce3;
+        background-color: #3cbc23e3;
+        color: #d9e9e8;
+        font-size: 2rem;
+        padding: 1rem;
+        box-shadow: 0px 0px 43px 12px rgb(218 145 145 / 89%);
+        border-radius: 1rem !important;
+    }
+    
+    .home-button .btn:hover {
+        background-color: orange;
         color: #d9e9e8;
         font-size: 2rem;
         padding: 1rem;
