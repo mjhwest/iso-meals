@@ -15,6 +15,7 @@ import Login from "./pages/Login";
 import Products from "./pages/Products";
 import SingleProduct from "./pages/SingleProduct";
 import Cart from "./pages/Cart"
+import Contact from "./pages/Contact"
 //import components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -54,6 +55,7 @@ function App() {
             <Container>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
+              <Route exact path="/contact" component={Contact} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/products" component={Products} />
               <Route exact path="/products/:productId" component={SingleProduct} />
