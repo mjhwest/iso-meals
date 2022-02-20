@@ -1,81 +1,148 @@
-# Final Project Starter
+# 23 Final Project: MERN Stack Single-Page Application 
+# Project : Iso-Meals
 
-This repository is here to work as a basis for your final project
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-## Installation and Setup
+## Description
+Working individually we were tasked to build a MERN Stack Single-Page Application of our choosing. This project provided the opportunity to demonstrate and implement the skills and knoweledge we have learnt since starting our web-development journey. 
 
-Install the npm dependencies
-````
-npm install
-````
+While we had the option to choose our own application the project had to include the following: 
+### Project Requirements
 
-Setting up environment variables
-1. Rename .env.EXAMPLE -> .env in the server folder
-2. Update the jwt secret to a random value. This will be used to sign your json web tokens. If someone else knows what this is they will be able to login as anyone!
+* Use React for the front end.
 
-Rename the following files/folders to your application name
-- The name property in package.json, client/package.json and server/package.json
-- The root folder name
-- In server/config/connection.js change the url database name to something that makes sense for your app. e.g. "mongodb://localhost/meal-tracker-db"
-- In client/public/index.html update the \<title> and \<meta> tags to give your site a proper title and description
+* Use GraphQL with a Node.js and Express.js server.
 
-Change the user seeds if you wish.
+* Use MongoDB and the Mongoose ODM for the database.
 
-## Running the application
+* Use queries and mutations for retrieving, adding, updating, and deleting data.
 
-If this is the first time running and you would like some test data, seeds can be run with:
-````
-npm run seed
-````
+* Be deployed using Heroku (with data).
 
-To start in develop mode:
-````
-npm run develop
-````
-This will start both the front-end and backend in watch mode
+* Have a polished UI.
 
-To start the services independently:
-Front end:
-````
-cd client && npm start
-````
+* Be responsive.
 
-Back end:
-````
-cd server && npm watch
-````
+* Be interactive (i.e., accept and respond to user input).
+
+* Include authentication (JWT).
+
+* Protect sensitive API key information on the server.
+
+* Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
 
 
-## Deployment
+The application that was created was called *Iso Meals*; an e-commerce store for people that have been suddenly forced into isolation and may not feel well enough to do their own shopping. This application lets them pick the 'food bundle' of their choice, without having to find and select individual items. 
+<br>
+<br> 
 
-1. When deploying to heroku, make sure that you add the necessary environment variables (JWT_SECRET and MONGODB_URI) to the heroku settings
+To view the applicatoin [click here and you will be directed to the live webpage](https://iso-meals.herokuapp.com/)
 
-## How to get started
 
-When starting to develop your app, it might be difficult to know where to start. This section should give you an idea of a way to start. This process is only one way to start and there may be a different process that works better for you or your app.
+# Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [License](#license)
+- [Contribute](#contribute)
+<br>
 
-- Think about what the user experience of your app will be. What screens will you have, what buttons will be on the screens and what actions will they perform. It can be really helpful to sketch out the screens you have on paper or in a program such as figma.
-- Once you know how users will interact with your app, think about what models you will need to integrate with the features of your application. Consider a scenario in which I want to make a todo list app where users are able to add and remove items and mark them as complete. I would need a model for my users, so they're able to login and have specific todos. Users would have properties such as name, email, password etc. I would also need a model for my Todo item, they might have a title, description, completion_status etc. There would also have to be a relation between Todo Items and Users. If you have a complicated model, it might help to draw out your models and how they relate to each other.
-- Once you think you know how your models are going to work, create the appropriate model files in the models folder. These will create the database entities that get stored in the database.
-- Next think about what information you need to retrieve from the database and how users will effect the information. This will inform what queries and mutations you will need to create for graphql. For the todo example, I might need the following queries: 
-    - getMyTodos: a query that returns a list of todo items which you've added.
-    - getMyCompleteTodos: a query that returns all the todos you've completed.
 
-    I also might need the following mutations:
-    - addNewTodo: a mutation that accepts all necessary parameters to create a new todo item
-    - completeTodo: a mutation that takes the id of a todo and marks it as complete.
-    - removeTodo: a mutation that takes the id of a todo and deletes it
-    - addUser: allow users to signup
-    - login: allow users to login and get a token
+## Installation
+Assuming the application has successfully been cloned there are a few small steps that need to be followed so that the user can install the application. <br>
 
-- Once you know what queries and mutations you will need fill out the typeDefs and then the resolvers. As you add more queries and mutations you should be able to start your server and test the routes as you go in the graphql playground. Start with only a few essential queries and mutations. Other queries and mutations can easily be implemented later.
-- Once your queries and mutations are working it's time to start working on the frontend.
+First, in the root directroy the user must open the command line and enter <br>
+'npm i'
+<br>
+this will allow all the npm dependencies to be installed. 
 
-- There are a few different ways you could work on the frontend this is one approach that may work for you.
-- Start in App.js and add the necessary routes with react router that you will need.
-- Build the individual pages paying attention to contain certain UI elements to seperate components where it makes sense.
-- When building a page that may display data from the frontend you could replace the api call with some dummy data while you're working on it and configure the api call later. e.g. if you're working on a list of todo items you could add the below code to the top of your component, then replace it with the actual api call when you are happy with the design.
-````
-const todos = [{id: 123, title: 'todo 1'}, {id: 124, title: 'todo 2'}];
-````
-- Be sure to define the necessary mutations and queries that your app will be using in the utils/mutations and utils/queries folder.
+Once the installatin has complete the user must 'seed' the application. Seeding the application is important as it means the products and user information will be created. <br> 
+
+This is done by inputing into the command line <br>
+'npm run seed' 
+<br>
+The user will see a message in the command line once all the seeds have completed seedinng. <br>
+<br>
+The last step to complete installation is to input 'npm run develop' in the root directoy. This allows the 'front end and back end' (server and client folders) to run concurrenty. 
+
+Once this is done a window will automically open displaying the application. 
+
+
+
+## Usage
+
+The application is straightforward and intuitive to use. This was important as it is meant to be a simple e-commerce store for people who are not feeling well. 
+
+When the application first loads the user will see the homepage. 
+
+![home](/client/public/images/home.png)
+
+Here they can login, signup, view the products and click on cart. However, if they are not signed in the cart page will display a message "sign in to view your cart". 
+
+If the user clicks on the 'PRODUCTS' tab, they will see all the products that are available to select. 
+
+![bundle](/client/public//images/bundle.png)
+
+The user then selects the bundle they want and they are taken to a decided page for that specific bundle, for example "Vegan Deluxe Bundle" 
+
+![VBD](/client/public/images/VDB.png)
+
+Here they see a description about the bundle, its price, if it is in stock and can decide if they want to add to cart. 
+
+If they do not want this bundle you can select the "Go back" button which will take you back to the products page, if they select add to cart a prompt will appear so they know the item was successfully added to their cart.
+
+![added](/client/public/images/added.png)
+
+The prompt then allows the user to decided to continue shopping or to go to cart. 
+
+If the user selects go to cart; they are presented with a small page, highlighting the items they selected and the total cost. 
+
+![cartpage](/client/public/images/cartpage.png) 
+<br>
+<br>
+<br>
+<br>
+
+## Features
+This application was made up of the following features: 
+- apollo-client
+- bcrypt
+- boostrap
+- concurrently 
+- dotenv
+- express
+- graphQL
+- JWT-decode
+- mongoose
+- node.js
+- nodemon 
+- react
+- react-bootstrap
+- react-dom
+- react-router-dom
+- react-scripts
+- react-share
+
+
+## Contribute
+If you would like to contribute to the project please contact me: 
+- Michael West - michaelwest.webdev@gmail.com
+
+
+    ```
+## Credits
+List your collaborators, if any, with links to their GitHub profiles.
+If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
+If you followed tutorials, include links to those here as well.
+## License
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+---
+🏆 The previous sections are the bare minimum, and your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
+## Badges
+![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+## Features
+If your project has a lot of features, list them here.
+## How to Contribute
+If you created an application or package and would like other developers to contribute it, you can include guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own if you'd prefer.

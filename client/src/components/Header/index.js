@@ -45,9 +45,6 @@ const Header = () => {
         <div className="hamburger" onClick={MobileClick}>
           <i className="fa-solid fa-burger fa-3x"></i>
 
-          {/* <div className="patty"> </div>
-          <div className="patty"> </div>
-          <div className="patty"> </div> */}
         </div>
 
         <div className="nav-items">
@@ -96,12 +93,7 @@ const Header = () => {
         {/* ******************MOBILE DISPLAY************************************************* */}
 
         <div className="mobile-container">
-          {/* 
-        <div className="hamburger" onClick={MobileClick}>
-          <div className="patty"> </div>
-          <div className="patty"> </div>
-          <div className="patty"> </div>
-        </div> */}
+
           <div className={`mobile-menu ${isOpened ? " " : "opened"} `}>
             {Auth.loggedIn() ? (
               <>
