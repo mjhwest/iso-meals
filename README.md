@@ -127,7 +127,7 @@ This application was made up of the following features:
 
 ## License
 
-This project is released under the [MIT LICENSE](ADD LINK HERE).
+This project is released under the [MIT LICENSE](https://github.com/mjhwest/iso-meals/blob/main/LICENSE).
 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
