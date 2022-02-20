@@ -18,19 +18,6 @@ const Header = () => {
     setOpened(!isOpened);
   };
 
-  //NOT WORKING*******************
-  // useEffect(() => {
-  //   const checkPageSize = () => {
-  //     var mobileMenu = document.querySelector(".mobile-menu");
-  //     var windowWidth = window.innerWidth;
-  //     if (windowWidth <= 992) {
-  //       console.log("poop");
-  //       setOpened(isOpened)
-  //     }
-  //   };
-
-  //   window.onresize = checkPageSize() 
-  // }, []);
 
   return (
     <header className="nav-container text-light mb-4 py-3 flex-row align-center">
@@ -70,6 +57,9 @@ const Header = () => {
             <>
               <Link className="btn btn-lg btn-info m-2" to="/login">
                 Login
+              </Link>
+              <Link className="btn btn-lg btn-info m-2" to="/contact">
+                Contact
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/signup">
                 <i className="fa-solid fa-user-plus"></i>
@@ -137,6 +127,14 @@ const Header = () => {
                 >
                   <i className="fa-solid fa-user-plus"></i>
                   Signup
+                </Link>
+                <Link
+                  className="btn btn-lg btn-light m-2"
+                  to="/contact"
+                  onClick={MobileClick}
+                >
+                  <i className="btn btn-lg btn-info m-2"></i>
+                  Contact
                 </Link>
                 <Link
                   className="btn btn-lg btn-light m-2"
