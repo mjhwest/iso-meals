@@ -51,10 +51,6 @@ const SingleProduct = () => {
     console.log("Adding to cart");
   };
 
-  //MODAL ATTEMPT HERE
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
   console.log(product);
   
@@ -79,7 +75,7 @@ const SingleProduct = () => {
         </>
       ) : (
         <>
-          <div className="my-modal view">
+          <div className="my-modal">
             <h1 className="modal-title"> You are not signed up</h1>
             <p> Please sign up so you can add an item to your cart  </p>
             <div className="button-container">
@@ -98,7 +94,7 @@ const SingleProduct = () => {
 
 
 {/* ******************************** THIS WAS START OF FIRST MODAL  */}
-
+{/* 
         <div className="my-modal">
           <h1 className="modal-title"> You successfully added a bundle</h1>
           <p> Keep shopping, or go to cart to confirm order.</p>
@@ -110,7 +106,7 @@ const SingleProduct = () => {
               Go To Cart
             </Link>
           </div>
-        </div> 
+        </div>  */}
 
         <Link className="btn btn-dark my-3" to="/products">
           Go Back
