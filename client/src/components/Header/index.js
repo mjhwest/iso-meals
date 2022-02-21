@@ -109,6 +109,11 @@ const Header = () => {
             */}
                   Products
                 </Link>
+                <Link className="btn btn-lg btn-info m-2" to="/contact">
+              <i className="fa-solid fa-message-middle"></i>
+               {/* this is not working */}
+                Contact
+              </Link>
                 <Link
                   className="btn btn-lg btn-light m-2"
                   to="/cart"
