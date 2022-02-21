@@ -55,13 +55,26 @@
     } */
     
     .home-button .hero-btn {
-        background-color: #5649b1e3;
+        background-color: #31824d;
         color: #d9e9e8;
         font-size: 2rem;
         padding: 1rem;
         box-shadow: 0px 0px 43px 12px rgb(218 145 145 / 89%);
         border-radius: 1rem !important;
         color: orange !important;
+        font-family: 'Roboto Condensed', sans-serif !important;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    
+    .home-button .hero-btn:hover {
+        background-color: orange;
+        color: #d9e9e8;
+        font-size: 2rem;
+        padding: 1rem;
+        box-shadow: 0px 0px 43px 12px rgb(218 145 145 / 89%);
+        border-radius: 1rem !important;
+        color: #31824d !important;
         font-family: 'Roboto Condensed', sans-serif !important;
         text-transform: uppercase;
         text-decoration: none;

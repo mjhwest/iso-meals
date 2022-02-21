@@ -16,6 +16,7 @@ const SingleProduct = () => {
   const [show, setShow] = useState(false);
   const [qty, setQty] = useState();
 
+
   const { productId } = useParams();
   const [addToCart, { error }] = useMutation(ADD_TO_CART);
   console.log(productId);
@@ -33,6 +34,11 @@ const SingleProduct = () => {
   const handleAddToCart = async (event) => {
     event.preventDefault();
     console.log(productId);
+
+    if (!Auth.loggedIn()) {
+      setShow(true)
+      return 
+     }
 
     try {
       const { data } = await addToCart({
@@ -73,8 +79,8 @@ const SingleProduct = () => {
           </>
         ) : (
           <>
-            <div className="my-modal view">
-              <h1 className="modal-title"> You are need to login / sign up</h1>
+            <div className={`my-modal ${show  ? 'view' : '' }`}>
+              <h1 className="modal-title"> You need to login / sign up</h1>
               <p> Please login / signup so you can add an item to your cart </p>
               <div className="button-container">
                 <Link className="btn btn-dark my-3" to="/signup">
