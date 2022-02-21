@@ -51,63 +51,46 @@ const SingleProduct = () => {
     console.log("Adding to cart");
   };
 
-
   console.log(product);
-  
+
   return (
-
     <>
-    <div className="modal-tester">
-      {Auth.loggedIn() ? (
-        <>
-          <div className="my-modal">
-            <h1 className="modal-title"> You successfully added a bundle</h1>
-            <p> Keep shopping, or go to cart to confirm order.</p>
-            <div className="button-container">
-              <Link className="btn btn-dark my-3" to="/products">
-                Continue Shopping
-              </Link>
-              <Link className="btn btn-dark my-3" to="/cart">
-                Go To Cart
-              </Link>
+      <div className="modal-tester">
+        {Auth.loggedIn() ? (
+          <>
+            <div className="my-modal">
+              <h1 className="modal-title"> You successfully added a bundle</h1>
+              <p> Keep shopping, or go to cart to confirm order.</p>
+              <div className="button-container">
+                <Link className="btn btn-dark my-3" to="/products">
+                  Continue Shopping
+                </Link>
+                <Link className="btn btn-dark my-3" to="/cart">
+                  Go To Cart
+                </Link>
+              </div>
             </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="my-modal">
-            <h1 className="modal-title"> You are not signed up</h1>
-            <p> Please sign up so you can add an item to your cart  </p>
-            <div className="button-container">
-              <Link className="btn btn-dark my-3" to="/signup">
-                Go To Signup
-              </Link>
+          </>
+        ) : (
+          <>
+            <div className="my-modal view">
+              <h1 className="modal-title"> You are need to login / sign up</h1>
+              <p> Please login / signup so you can add an item to your cart </p>
+              <div className="button-container">
+                <Link className="btn btn-dark my-3" to="/signup">
+                  Go To Signup
+                </Link>
+                <Link className="btn btn-dark my-3" to="/login">
+                  Go To Login
+                </Link>
+              </div>
             </div>
-          </div>
-
-        </>
-      )}
-    </div> <>
-    </>
-    
-    <>
-
-
-{/* ******************************** THIS WAS START OF FIRST MODAL  */}
-{/* 
-        <div className="my-modal">
-          <h1 className="modal-title"> You successfully added a bundle</h1>
-          <p> Keep shopping, or go to cart to confirm order.</p>
-          <div className="button-container">
-            <Link className="btn btn-dark my-3" to="/products">
-              Continue Shopping
-            </Link>
-            <Link className="btn btn-dark my-3" to="/cart">
-              Go To Cart
-            </Link>
-          </div>
-        </div>  */}
-
+          </>
+        )}
+      </div>
+      {/* {" "} */}
+      <></>
+      <>
         <Link className="btn btn-dark my-3" to="/products">
           Go Back
         </Link>
@@ -124,10 +107,13 @@ const SingleProduct = () => {
               <ListGroup.Item>
                 <Rating
                   value={product.rating}
-                  text={`${product.numReviews} reviews`} />
+                  text={`${product.numReviews} reviews`}
+                />
               </ListGroup.Item>
               <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
-              <ListGroup.Item>Description: {product.description}</ListGroup.Item>
+              <ListGroup.Item>
+                Description: {product.description}
+              </ListGroup.Item>
             </ListGroup>
           </Col>
 
@@ -186,17 +172,12 @@ const SingleProduct = () => {
             </Card>
           </Col>
         </Row>
-      </></>
+      </>
+    </>
   );
 };
 
-
-
-
 export default SingleProduct;
-
-
-
 
 // BEFORE TRYING TO ADD ANOTHER MODAL FOR NOT LOGGED IN/ DIRECT TO SIGNUP
 
@@ -211,8 +192,7 @@ export default SingleProduct;
 // import Rating from "../components/Rating/Rating";
 // import { ADD_TO_CART } from "../utils/mutations";
 // import Button from 'react-bootstrap/Button';
-// import './singleproduct.css'; 
- 
+// import './singleproduct.css';
 
 // const SingleProduct = () => {
 //   const [show, setShow] = useState(false);
@@ -241,10 +221,10 @@ export default SingleProduct;
 //         variables: { productId },
 //       });
 
-//       if (addToCart){ 
+//       if (addToCart){
 //         console.log('success you added to cart' )
 //         const modal = document.querySelector(".my-modal")
-//         modal.classList.add( "view") 
+//         modal.classList.add( "view")
 //        }
 
 //     } catch (e) {
@@ -256,7 +236,6 @@ export default SingleProduct;
 
 //   //MODAL ATTEMPT HERE
 
-
 //   const handleClose = () => setShow(false);
 //   const handleShow = () => setShow(true);
 
@@ -264,18 +243,18 @@ export default SingleProduct;
 //   return (
 //     <>
 
-//     <div className="my-modal"> 
+//     <div className="my-modal">
 //       <h1 className="modal-title"> You successfully added a bundle</h1>
 //       <p> Keep shopping, or go to cart to confirm order. </p>
 //       <div className="button-container">
 //       <Link className="btn btn-dark my-3" to="/products">
-//        Continue Shopping 
+//        Continue Shopping
 //       </Link>
 //       <Link className="btn btn-dark my-3" to="/cart">
-//         Go To Cart 
+//         Go To Cart
 //       </Link>
-      
-//         </div> 
+
+//         </div>
 //     </div>
 
 //       <Link className="btn btn-dark my-3" to="/products">
@@ -322,20 +301,19 @@ export default SingleProduct;
 //                 </Row>
 //               </ListGroup.Item>
 
-        
 //               {product.countInStock > 0 && (
-//                 <ListGroup.Item> 
-//                   <Row> 
+//                 <ListGroup.Item>
+//                   <Row>
 //                     <Col> Qty</Col>
 //                     <Col>
-//                     <Form.Control as='select' 
-//                     value={qty} 
+//                     <Form.Control as='select'
+//                     value={qty}
 //                     onChange={(e) => setQty(e.tatget.value)}
 //                     >
 //                       {
 //                       [...Array(product.countInStock).keys()].map(x => (
 //                       <option key={x + 1} value={x + 1}>
-//                       {x+ 1}                           
+//                       {x+ 1}
 //                       </option>
 //                       ))}
 //                     </Form.Control>
@@ -343,7 +321,6 @@ export default SingleProduct;
 //                   </Row>
 //                 </ListGroup.Item>
 //               )}
-
 
 //               <ListGroup.Item>
 //                 <Button
@@ -355,8 +332,6 @@ export default SingleProduct;
 //                 >
 //                   Add to Cart
 //                 </Button>
-
-
 
 //               </ListGroup.Item>
 //             </ListGroup>
