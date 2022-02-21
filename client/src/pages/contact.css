@@ -72,6 +72,8 @@
     border: 1px solid black;
     font-family: 'Roboto Condensed', sans-serif;
     color: orange;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .contact .container {
