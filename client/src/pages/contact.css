@@ -68,8 +68,10 @@
     box-shadow: 0 !important;
     margin-bottom: 1rem;
     padding-left: 0 !important;
-    background-color: #92CC84;
-    border: 1px solid black
+    background-color: #598f1d;
+    border: 1px solid black;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: orange;
 }
 
 .contact .container {
@@ -134,4 +136,8 @@ textarea.form-control {
 
 ::placeholder {
     color: black !important;
+}
+
+.form-control {
+    background-color: #598f1d !important;
 }

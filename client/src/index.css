@@ -1107,7 +1107,7 @@ a:hover {
 }
 
 .btn:hover {
-    background-color: #cecece;
+    /* background-color: #cecece; */
 }
 
 .btn.btn-squared {
@@ -1130,15 +1130,6 @@ a:hover {
     text-align: center;
 }
 
-.btn.btn-primary {
-    background-color: #2d3e50;
-    color: #d9e9e8;
-}
-
-.btn.btn-primary:hover {
-    background-color: #57779a;
-}
-
 .btn.btn-danger {
     background-color: #e64c66;
     color: #ffffff;
@@ -1154,7 +1145,7 @@ a:hover {
 }
 
 .btn.btn-info:hover {
-    background-color: #31e1bd;
+    /* background-color: #31e1bd; */
 }
 
 .btn.btn-light {

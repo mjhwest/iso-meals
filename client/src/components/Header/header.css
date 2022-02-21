@@ -82,3 +82,20 @@
     margin-left: auto !important;
     width: fit-content;
 }
+
+.nav-items .btn.btn-info {
+    background-color: transparent;
+    border-color: orange !important;
+}
+
+.btn.btn-primary {
+    background-color: #598f1d;
+    color: orange;
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn.btn-primary:hover {
+    background-color: orange;
+    color: #598f1d;
+}
