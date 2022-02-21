@@ -46,6 +46,18 @@
 }
 
 .form-control {
-    background-color: #92cc84 !important;
-    border: 2px solid black !important;
+    /* background-color: #92cc84 !important; */
+    border: 1px solid black !important;
+}
+
+.btn.btn-dark {
+    background-color: #598f1d;
+    color: orange;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn.btn-dark:hover {
+    background-color: orange;
+    color: #598f1d;
+    font-family: 'Roboto Condensed', sans-serif;
 }

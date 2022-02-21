@@ -15,7 +15,7 @@ const Products = () => {
 
   return (
     <>
-      <h1> View Our Food Bundles</h1>
+      <div className="bundle-title"> View Our Food Bundles</div>
       <Row>
   
 
