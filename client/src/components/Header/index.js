@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 
 import Auth from "../../utils/auth";
 
@@ -48,7 +47,7 @@ const Header = () => {
               */}
                 Products
               </Link>
-              <Link className="btn btn-lg btn-info m-2" to="/contact">
+              <Link className="btn btn-lg btn-light m-2" to="/contact">
               <i className="fa-solid fa-message-middle"></i>
                {/* this is not working */}
                 Contact
@@ -60,10 +59,10 @@ const Header = () => {
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-info m-2" to="/login">
+              <Link className="btn btn-lg btn-light m-2" to="/login">
                 Login
               </Link>
-              <Link className="btn btn-lg btn-info m-2" to="/contact">
+              <Link className="btn btn-lg btn-light m-2" to="/contact">
               <i className="fa-solid fa-message-middle"></i>
                {/* this is not working */}
                 Contact
@@ -109,7 +108,7 @@ const Header = () => {
             */}
                   Products
                 </Link>
-                <Link className="btn btn-lg btn-info m-2" to="/contact">
+                <Link className="btn btn-lg btn-light m-2" to="/contact">
               <i className="fa-solid fa-message-middle"></i>
                {/* this is not working */}
                 Contact
@@ -126,7 +125,7 @@ const Header = () => {
             ) : (
               <>
                 <Link
-                  className="btn btn-lg btn-info m-2"
+                  className="btn btn-lg btn-light m-2"
                   to="/login"
                   onClick={MobileClick}
                 >
@@ -145,7 +144,7 @@ const Header = () => {
                   to="/contact"
                   onClick={MobileClick}
                 >
-                  <i className="btn btn-lg btn-info m-2"></i>
+                  <i className="btn btn-lg btn-light m-2"></i>
                   Contact
                 </Link>
                 <Link

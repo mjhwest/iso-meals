@@ -1102,7 +1102,7 @@ a:hover {
     border: 1px solid transparent;
     outline: none;
     color: #1a1a1a;
-    background-color: #aeaeae;
+    /* background-color: #aeaeae; */
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
@@ -1149,27 +1149,13 @@ a:hover {
 }
 
 .btn.btn-light {
-    background-color: #d9e9e8;
+    /* background-color: #d9e9e8; */
     color: #1a1a1a;
 }
 
 .btn.btn-light:hover {
     background-color: #84b8b4;
 }
-
-
-/* 
-.btn.btn-dark {
-    background-color: #598f1d;
-    color: orange;
-    font-family: 'Roboto Condensed', sans-serif;
-}
-
-.btn.btn-dark:hover {
-    background-color: orange;
-    color: #598f1d;
-    font-family: 'Roboto Condensed', sans-serif;
-} */
 
 .btn.btn-white {
     background-color: #ffffff;
