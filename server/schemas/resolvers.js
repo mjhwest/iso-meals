@@ -166,7 +166,24 @@ const resolvers = {
       }
       throw new AuthenticationError("Not logged in");
     },
+
+    removeItemFromCart: 
+    async (parent, { productId }, context) => {
+      if (context.user) {
+        return await User.findByIdAndUpdate(
+          context.user._id,
+          { $pull: { cart: productId } },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("Not logged in");
+    },
+
+
+
   },
+
+
 
   //HOW TO GET PRODUCTS IN ORDER
   Order: {

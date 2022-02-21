@@ -36,5 +36,18 @@ mutation addToCart ($productId: ID!){
   }
 }`
 
+export const REMOVE_FROM_CART=gql`
+mutation removeItemFromCart ($productId: ID!){
+  removeItemFromCart(productId: $productId) {
+    username 
+    cart {
+      name
+      price
+      description
+    }
+  }
+}
 
+
+`
 

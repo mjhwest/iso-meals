@@ -9,12 +9,25 @@ import { QUERY_CART } from "../utils/queries";
 //need a query to load cart details
 import "./cart.css";
 import Auth from "../utils/auth";
+import { REMOVE_FROM_CART } from "../utils/mutations";
 
 const Cart = () => {
   const { products } = useParams();
-  const { loading, data } = useQuery(QUERY_CART, {
+  const { loading, data, refetch} = useQuery(QUERY_CART, {
     fetchPolicy: "no-cache",
   });
+
+  const [removeCart, { error }]  =useMutation(REMOVE_FROM_CART)
+
+  async function removeItem(productId) {
+    await removeCart({
+      variables: {productId: productId}
+    }) 
+    await refetch();
+
+    
+  }
+
   const cartData = data?.user?.cart || [];
   console.log(cartData);
 
@@ -26,7 +39,7 @@ const Cart = () => {
     return sum;
   }
 
-  const [cartItem, addToCart] = useState(" ");
+  // const [cartItem, addToCart] = useState(" ");
 
   return (
     <>
@@ -54,12 +67,17 @@ const Cart = () => {
                     <Col className="product-details">
                       <div className="product-description col text-start">
                         {cartItem.description}
+
                         <div className="remove">
                           <span
+                          onClick ={ () =>  removeItem(cartItem._id)}
+                          
                            role="img" aria-label="trash">
                             Remove From Cart 🗑️
                           </span>
                         </div>
+
+
                       </div>
                       <div className="product-price col text-end">
                         ${cartItem.price}

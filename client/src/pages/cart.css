@@ -37,3 +37,7 @@
 .product-cart-image {
     width: 150px;
 }
+
+.remove {
+    cursor: pointer;
+}

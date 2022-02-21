@@ -79,7 +79,7 @@ const SingleProduct = () => {
         </>
       ) : (
         <>
-          <div className="my-modal">
+          <div className="my-modal view">
             <h1 className="modal-title"> You are not signed up</h1>
             <p> Please sign up so you can add an item to your cart  </p>
             <div className="button-container">
