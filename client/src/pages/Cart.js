@@ -29,7 +29,7 @@ const Cart = () => {
   }
 
   const cartData = data?.user?.cart || [];
-  console.log(cartData);
+  // console.log(cartData);
 
   function calculateTotal() {
     let sum = 0;

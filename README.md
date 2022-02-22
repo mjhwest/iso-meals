@@ -111,6 +111,7 @@ This application was made up of the following features:
 - boostrap
 - concurrently 
 - dotenv
+- emailjs
 - express
 - graphQL
 - JWT-decode

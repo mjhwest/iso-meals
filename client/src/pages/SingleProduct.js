@@ -19,7 +19,7 @@ const SingleProduct = () => {
 
   const { productId } = useParams();
   const [addToCart, { error }] = useMutation(ADD_TO_CART);
-  console.log(productId);
+  // console.log(productId);
 
   const { loading, data } = useQuery(QUERY_SINGLE_PRODUCT, {
     variables: { id: productId },
@@ -33,7 +33,7 @@ const SingleProduct = () => {
 
   const handleAddToCart = async (event) => {
     event.preventDefault();
-    console.log(productId);
+    // console.log(productId);
 
     if (!Auth.loggedIn()) {
       setShow(true)
@@ -57,7 +57,7 @@ const SingleProduct = () => {
     console.log("Adding to cart");
   };
 
-  console.log(product);
+  // console.log(product);
 
   return (
     <>
