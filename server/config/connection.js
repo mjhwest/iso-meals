@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const path = require('path');
 require('dotenv').config({path: path.join(__dirname, '../.env' )});
-console.log(process.env.MONGODB_URI)
+
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/iso-meals',
