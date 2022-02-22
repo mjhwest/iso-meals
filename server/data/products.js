@@ -5,7 +5,7 @@ const products = [
     image: "/images/classic.jpg",
     price: 150,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 22,
     countInStock: 50,
   },
   {
@@ -15,7 +15,7 @@ const products = [
     image: "/images/classicplus.jpg",
     price: 175,
     rating: 4,
-    numReviews: 12,
+    numReviews: 17,
     countInStock: 40,
   },
   {
@@ -34,7 +34,7 @@ const products = [
     image: "/images/gluten-free.jpg",
     price: 150,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 19,
     countInStock: 50,
   },
   {
@@ -54,7 +54,7 @@ const products = [
     image: "/images/glut-free-del.jpg",
     price: 250,
     rating: 4,
-    numReviews: 12,
+    numReviews: 15,
     countInStock: 35,
   },
   {
@@ -84,7 +84,7 @@ const products = [
     image: "/images/vegandeluxe.jpg",
     price: 250,
     rating: 4,
-    numReviews: 8,
+    numReviews: 9,
     countInStock: 15,
   },
   {
@@ -103,7 +103,7 @@ const products = [
     image: "/images/paleo-plus.jpg",
     price: 175,
     rating: 4,
-    numReviews: 12,
+    numReviews: 9,
     countInStock: 40,
   },
   {
@@ -122,7 +122,7 @@ const products = [
     image: "/images/vegetarian.jpg",
     price: 150,
     rating: 4,
-    numReviews: 12,
+    numReviews: 11,
     countInStock: 32,
   },
   {
@@ -132,7 +132,7 @@ const products = [
     image: "/images/vegetarianplus.jpg",
     price: 175,
     rating: 4,
-    numReviews: 12,
+    numReviews: 22,
     countInStock: 25,
   },
   {
@@ -142,7 +142,7 @@ const products = [
     image: "/images/vegetariandeluxe.jpg",
     price: 250,
     rating: 4.5,
-    numReviews: 12,
+    numReviews: 15,
     countInStock: 50,
   },
 ];
