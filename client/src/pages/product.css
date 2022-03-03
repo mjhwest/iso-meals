@@ -24,3 +24,15 @@
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+.item-search {
+    color: black !important;
+    background-color: #85ba4a !important;
+    border-radius: .5rem !important;
+}
+
+.item-search:hover {
+    color: black !important;
+    background-color: orange !important;
+    border-radius: .5rem !important;
+}
