@@ -62,14 +62,14 @@ const Header = () => {
               <Link className="btn btn-lg btn-light m-2" to="/login">
                 Login
               </Link>
+              <Link className="btn btn-lg btn-light m-2" to="/signup">
+                <i className="fa-solid fa-user-plus"></i>
+                Signup
+              </Link>
               <Link className="btn btn-lg btn-light m-2" to="/contact">
               <i className="fa-solid fa-message-middle"></i>
                {/* this is not working */}
                 Contact
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                <i className="fa-solid fa-user-plus"></i>
-                Signup
               </Link>
               <Link className="btn btn-lg btn-light m-2" to="/products">
                 <i className="fa-solid fa-fork-knife"></i>
