@@ -2,7 +2,7 @@ import React from "react";
 import Product from "../components/Product/Product.js";
 import { useQuery } from '@apollo/client';
 import { QUERY_ALL_PRODUCTS} from '../utils/queries';
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import "./product.css";
 
 
@@ -16,6 +16,27 @@ const Products = () => {
   return (
     <>
       <div className="bundle-title"> View Our Food Bundles</div>
+
+      <div className="search-bundle"> Search For a Bundle </div>
+      <>
+  <Button variant="primary" className="item-search" size="lg" active>
+    Classic 
+  </Button>{' '}
+  <Button variant="primary" className="item-search" size="lg" active>
+    Gluten Free 
+  </Button>{' '}
+  <Button variant="primary" className="item-search" size="lg" active>
+    Vegan
+  </Button>{' '}
+  <Button variant="primary" className="item-search" size="lg" active>
+    Paleo
+  </Button>{' '}
+  <Button variant="primary" className="item-search" size="lg" active>
+  Vegetarian
+  </Button>{' '}
+
+</>
+      
       <Row>
   
 
