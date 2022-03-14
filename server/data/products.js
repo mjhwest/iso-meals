@@ -13,7 +13,6 @@ const products = [
     name: "Classic Plus Bundle",
     description:
       "Classic breakfast, lunch and dinner for 7 days, with a range of snacks. ",
-    // image: "/images/classic.jpg",
     image: "/images/classic-pasta.jpg",
     price: 175,
     rating: 4,

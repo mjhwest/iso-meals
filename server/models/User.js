@@ -32,18 +32,22 @@ const userSchema = new Schema({
     minlength: 5,
   },
   isAdmin: {
-    type: Boolean, 
+    type: Boolean,
     required: true,
-    default: false, 
+    default: false,
   },
-  orders: [{
-    type: Schema.Types.ObjectId,
-    ref:'Order'
-  }],
-  cart: [{
-    type: Schema.Types.ObjectId,
-    ref:'Product'
-  }],
+  orders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Order",
+    },
+  ],
+  cart: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Product",
+    },
+  ],
 });
 
 userSchema.pre("save", async function (next) {

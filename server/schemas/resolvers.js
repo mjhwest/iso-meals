@@ -2,7 +2,6 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Category, Order, Product } = require("../models");
 const { signToken } = require("../utils/auth");
 
-//ADD STRIPE LATER
 
 const resolvers = {
   Query: {
@@ -10,10 +9,6 @@ const resolvers = {
     users: async () => {
       return await User.find();
     },
-    //find user by username
-    // user: async (parent, { _id }) => {
-    //   return await User.findOne({ _id });
-    // },
 
     //all products
     products: async () => {

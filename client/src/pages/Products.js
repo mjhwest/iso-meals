@@ -20,7 +20,6 @@ const Products = () => {
   const { loading, data, error, status } = useQuery(QUERY_ALL_PRODUCTS, { onCompleted: setInitProducts }, { fetchPolicy: "no-cache" });
   
   const theProducts = initProducts.products;
-  // console.log(loading)
   const initialState = { products: [] }
 
   // Set reducer states according to button clicked
