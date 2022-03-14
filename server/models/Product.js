@@ -59,11 +59,13 @@ const productSchema = new Schema(
       required: true,
       default: 0,
     },
-    // category: {
-    //   type: Schema.Types.ObjectId,
-    //   ref: 'Category',
-    //   required: true
-    // }
+    category: {
+      type: String,
+      required: true
+      // type: Schema.Types.ObjectId,
+      // ref: 'Category',
+      // required: true
+    }
   },
   {
     timestamps: true,

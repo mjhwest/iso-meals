@@ -7,6 +7,7 @@ const products = [
     rating: 4.5,
     numReviews: 22,
     countInStock: 50,
+    category: 'Classic'
   },
   {
     name: "Classic Plus Bundle",
@@ -18,6 +19,7 @@ const products = [
     rating: 4,
     numReviews: 17,
     countInStock: 40,
+    category: 'Classic'
   },
   {
     name: "Classic Deluxe Bundle",
@@ -28,6 +30,7 @@ const products = [
     rating: 4,
     numReviews: 12,
     countInStock: 35,
+    category: 'Classic'
   },
   {
     name: "Gluten-Free Bundle",
@@ -37,6 +40,7 @@ const products = [
     rating: 4.5,
     numReviews: 19,
     countInStock: 50,
+    category: 'Gluten-Free'
   },
   {
     name: "Gluten-Free Plus Bundle",
@@ -47,6 +51,7 @@ const products = [
     rating: 4,
     numReviews: 12,
     countInStock: 40,
+    category: 'Gluten-Free'
   },
   {
     name: "Gluten-Free Deluxe Bundle",
@@ -57,6 +62,7 @@ const products = [
     rating: 4,
     numReviews: 15,
     countInStock: 35,
+    category: 'Gluten-Free'
   },
   {
     name: "Vegan Bundle",
@@ -66,6 +72,7 @@ const products = [
     rating: 4.5,
     numReviews: 12,
     countInStock: 30,
+    category: 'Vegan'
   },
   {
     name: "Vegan Plus Bundle",
@@ -76,6 +83,7 @@ const products = [
     rating: 4,
     numReviews: 8,
     countInStock: 25,
+    category: 'Vegan'
   },
 
   {
@@ -87,6 +95,7 @@ const products = [
     rating: 4,
     numReviews: 9,
     countInStock: 15,
+    category: 'Vegan'
   },
   {
     name: "Paleo Bundle",
@@ -96,6 +105,7 @@ const products = [
     rating: 4.5,
     numReviews: 12,
     countInStock: 50,
+    category: 'Paleo'
   },
   {
     name: "Paleo Plus Bundle",
@@ -106,6 +116,7 @@ const products = [
     rating: 4,
     numReviews: 9,
     countInStock: 40,
+    category: 'Paleo'
   },
   {
     name: "Paleo Deluxe Bundle",
@@ -116,6 +127,7 @@ const products = [
     rating: 4,
     numReviews: 12,
     countInStock: 35,
+    category: 'Paleo'
   },
   {
     name: "Vegetarian Bundle",
@@ -125,6 +137,7 @@ const products = [
     rating: 4,
     numReviews: 11,
     countInStock: 32,
+    category: 'Vegetarian'
   },
   {
     name: "Vegetarian Plus Bundle",
@@ -135,6 +148,7 @@ const products = [
     rating: 4,
     numReviews: 22,
     countInStock: 25,
+    category: 'Vegetarian'
   },
   {
     name: "Vegetarian Deluxe Bundle",
@@ -145,6 +159,7 @@ const products = [
     rating: 4.5,
     numReviews: 15,
     countInStock: 50,
+    category: 'Vegetarian'
   },
 ];
 
