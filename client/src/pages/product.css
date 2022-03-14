@@ -29,6 +29,8 @@
     color: black !important;
     background-color: #85ba4a !important;
     border-radius: .5rem !important;
+    margin-right: .5rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 .item-search:hover {

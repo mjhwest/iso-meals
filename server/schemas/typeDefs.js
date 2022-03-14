@@ -41,6 +41,7 @@ const typeDefs = gql`
     rating: Float!
     numReviews: Int 
     countInStock: Int
+    category: String
 
   }
 
