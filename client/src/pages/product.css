@@ -38,3 +38,13 @@
     background-color: orange !important;
     border-radius: .5rem !important;
 }
+
+@media screen and (max-width: 768px) {
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .item-search {
+        margin-right: 0;
+    }
+}

@@ -96,7 +96,8 @@ const Products = () => {
 
       <div className="search-bundle"> Search For a Bundle </div>
 
-      {buttons.map(({ name, value }) => (
+      <div className="filter-container">
+        {buttons.map(({ name, value }) => (
           <Button
             key={name}
             value={value}
@@ -123,6 +124,7 @@ const Products = () => {
             {name}
           </Button>
         ))}
+      </div>
       <Row>
 
         { 
