@@ -17,7 +17,7 @@ const buttons = [
 const Products = () => {
   
   const [ initProducts, setInitProducts ] = useState({});
-  const { loading, data, error, status } = useQuery(QUERY_ALL_PRODUCTS, { onCompleted: setInitProducts }, { fetchPolicy: "no-cache" });
+  const { loading, data, error, status } = useQuery(QUERY_ALL_PRODUCTS, { onCompleted: setInitProducts });
   
   const theProducts = initProducts.products;
   const initialState = { products: [] }
@@ -128,7 +128,7 @@ const Products = () => {
 
         { 
         loading ? ( <div>Loading</div> ) : (
-            state.products.map((product) => (
+            state?.products?.map((product) => (
               
               <Col sm={12} md={6} lg={4} ex={1} key={product._id} >
                 <Product product={product} />
