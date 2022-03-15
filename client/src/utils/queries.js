@@ -1,5 +1,7 @@
 import { gql } from '@apollo/client';
 
+// queries for user, all products, single product and cart 
+
 export const QUERY_USER = gql`
   query user($username: String!) {
     user(username: $username) {

@@ -31,10 +31,6 @@
 .contacts {
     padding: 3rem 0;
     position: relative;
-    /* background-color: #343435; */
-    /* background: url(./assets/scrab.jpg) no-repeat;
-        background-size: cover;
-        background-position: center; */
 }
 
 .contacts h1 {
@@ -83,7 +79,6 @@
 
 .contacts input:focus,
 .contacts textarea:focus {
-    /* background: transparent; */
     color: black;
     border-bottom: 0.125rem solid black;
 }

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// Import the `useParams()` hook from React Router
 import { useParams } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { useQuery } from "@apollo/client";
@@ -94,7 +93,6 @@ const SingleProduct = () => {
           </>
         )}
       </div>
-      {/* {" "} */}
       <></>
       <>
         <Link className="btn btn-dark my-3" to="/products">

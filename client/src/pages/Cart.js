@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-// Import the `useParams()` hook from React Router
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Card, Button } from "react-bootstrap";
 import { QUERY_CART } from "../utils/queries";
-//need a query to load cart details
 import "./cart.css";
 import Auth from "../utils/auth";
 import { REMOVE_FROM_CART } from "../utils/mutations";
 
+//query cart and remove from cart 
 const Cart = () => {
   const { products } = useParams();
   const { loading, data, refetch} = useQuery(QUERY_CART, {
@@ -29,8 +28,9 @@ const Cart = () => {
   }
 
   const cartData = data?.user?.cart || [];
-  // console.log(cartData);
 
+
+//function to calaculate total cost of products in cart 
   function calculateTotal() {
     let sum = 0;
     cartData.forEach((product) => {
@@ -39,7 +39,6 @@ const Cart = () => {
     return sum;
   }
 
-  // const [cartItem, addToCart] = useState(" ");
 
   return (
     <>
@@ -57,7 +56,6 @@ const Cart = () => {
             ) : (
               cartData.map((cartItem) => (
                 <Col key={cartItem._id} sm={12} md={12} lg={12} ex={12}>
-                  {/* <Cart  /> We're already in the Cart component. If you try to render a component inside itself it will cause an infinite loop */}
                   <div className="cart-list-items my3 p-3 rounded">
                     <Image
                       src={cartItem.image}
