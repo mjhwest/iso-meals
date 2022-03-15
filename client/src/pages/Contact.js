@@ -2,9 +2,10 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import $ from "jquery";
 import "./contact.css";
-// import { useForm } from "react-hook-form";
 
-//UNDO TO HERER //
+
+//using emailJS to get email data . 
+
 function Contact() {
   const serviceID = "service_ID";
   const templateID = "template_ID";
@@ -18,7 +19,6 @@ function Contact() {
     emailjs.sendForm(serviceID, templateID, form.current, userID).then(
       (result) => {
         console.log(result.text);
-        // createModal();
         $("#success-modal").show();
         $("#close-modal").on("click", function () {
           $("#name").val("");
@@ -108,6 +108,7 @@ function Contact() {
           </div>
         </form>
       </div>
+      {/* modal to show the email has successfully been sent  */}
       <div id="success-modal" className="custom-modal">
         <h1 className="success-heading pb-3">Thanks for your message!</h1>
         <p className="success-text pb-3">

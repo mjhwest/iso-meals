@@ -1,3 +1,5 @@
+// seed data 
+
 const products = [
   {
     name: "Classic Bundle",
